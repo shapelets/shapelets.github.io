@@ -1,8 +1,8 @@
 ---
 layout: default
 img: phones.png
-category: Services
-title: Google Web Fonts and<br>Font Awesome Icons
+category: Features
+title: Efficient computation<br>GPU - CPU - Multicore
 description: |
 ---
-This template features the 'Lato' font, part of the [Google Web Font library](http://www.google.com/fonts), as well as [icons from Font Awesome](http://fontawesome.io).
+Shapelets algorithms are the result of a thorough research process whereby each algorithm is selected based on applicability concerns and computation efficiency. Data series analysis is a field that demands extensive computational power; therefore, the engineering team is committed to deliver solutions that take maximum benefit of the resources available. Our code base runs on CUDA GPUs, OpenCL and multicore backends.

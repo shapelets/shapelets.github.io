@@ -9,7 +9,7 @@ author: The Grumpy Cat
 description: > # "Write an awesome description for your new site here.
   Shapelets is an open source framework for time series analysis in big data environments. Easy to integrate with any database, high-performance (GPUs,CPU and multicore) and scalable.
 copyright: '©2018 Shapelets. All Rights Reserved.'
-credits: 'Contact: <a href="mailto:info@shapelets.io">info@shapelets.io</a>.'
+credits: 'Contact: <a href="mailto:info@shapelets.io">info@shapelets.io</a>'
 
 # ----------------------- #
 #    Jekyll & Plugins     #
