@@ -1,6 +1,6 @@
 ---
 layout: default
-img: TimeseriePC.png
+img: TimeSeriePC.png
 category: Features
 title: An open-source platform for<br>Time-series analysis
 description: |
