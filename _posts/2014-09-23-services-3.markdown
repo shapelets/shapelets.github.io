@@ -5,4 +5,4 @@ category: Features
 title: Efficient computation:<br>GPU - CPU & Multicore
 description: |
 ---
-Shapelets algorithms are the result of a thorough research process whereby each algorithm is selected based on applicability concerns and computational efficiency. Data series analysis demands extensive computational power and we are committed to deliver solutions that take maximum benefit of the resources available. Our code base runs on CUDA GPUs, OpenCL and multicore backends.
+Shapelets algorithms are the result of a thorough research process whereby each algorithm is selected based on applicability concerns and computational efficiency. Our code base runs on GPUs (using CUDA or OpenCL) and on multicores as well.
