@@ -63,6 +63,9 @@
 			$.ajax({
 				url : 'https://shapelets.us19.list-manage.com/subscribe?u=d13987dd7fdb6b54d2fbddef0&id=ee4e9119f5',
 				type : 'post',
+                cache : false,
+                dataType : 'json',
+                contentType: "application/json; charset=utf-8",
 				data : $(this).serialize(),
 				success : function(data) {
 					$('.col-md-4 form .input-group #submit i').addClass('fa fa-check');
