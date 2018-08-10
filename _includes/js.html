@@ -58,24 +58,24 @@
 <script>
     $(document).on('submit', '#news', function(e) {
 		e.preventDefault();	
-			$('.col-md-4 form .input-group #submit i').removeClass('fa fa-check');
-			$('.col-md-4 form .input-group #submit i').addClass('fa fa-spinner fa-spin');
+			$('.col-md-4 form .input-group .input-group-btn #submit i').removeClass('fa fa-check');
+			$('.col-md-4 form .input-group .input-group-btn #submit i').addClass('fa fa-spinner fa-spin');
 			$.ajax({
-				url : 'https://shapelets.us19.list-manage.com/subscribe/post',
-				type : 'post',
+				url : 'https://shapelets.us19.list-manage.com/subscribe/post-json?&c=?',
+				type : 'get',
                 cache : false,
                 dataType : 'json',
                 contentType: "application/json; charset=utf-8",
 				data : $(this).serialize(),
 				success : function(data) {
-					$('.col-md-4 form .input-group #submit i').addClass('fa fa-check');
-					$('.col-md-4 form .input-group #submit i').removeClass('fa fa-spinner fa-spin');
-					$('.subscribe .success_msg').html("<p class='alert alert-success'><strong>Your Request was successfully sent.</strong> Thank you!</p>");
+					$('.col-md-4 form .input-group .input-group-btn #submit i').addClass('fa fa-check');
+					$('.col-md-4 form .input-group .input-group-btn #submit i').removeClass('fa-spinner fa-spin');
+					$('.col-md-4 .success_msg').html("<p class='alert alert-success'><strong>Your Request was successfully sent.</strong> Thank you!</p>");
 			},
 			error : function(xhr, err) {
-				$('.col-md-4 form .input-group #submit i').addClass('fa fa-check');
-				$('.col-md-4 form .input-group #submit i').removeClass('fa fa-spinner fa-spin');
-				$('.subscribe .success_msg').html("<p class='alert alert-danger'>Oops!! An error occurred.</p>");
+				$('.col-md-4 form .input-group .input-group-btn #submit i').addClass('fa fa-check');
+				$('.col-md-4 form .input-group .input-group-btn #submit i').removeClass('fa fa-spinner fa-spin');
+				$('.col-md-4 .success_msg').html("<p class='alert alert-danger'>Oops!! An error occurred.</p>");
 			}
 		});
 		return false;
