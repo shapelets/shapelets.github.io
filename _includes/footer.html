@@ -1,30 +1,47 @@
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Features</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
+<section id="contact">
+        <div class="banner">
+            <div class="container">
+    
+                <div class="row">
+                    <div class="col-md-6">
+                            <div id="map_canvas" class="google-map"></div>
+                    </div>
+                    <div class="col-md-6 center">
+                        <img src="../img/shapelets-negativo.png" />
+                        <p class="address">C/Puerta del mar, 18 (2nd Floor) / Málaga, Spain 29005</p>
+                        <a class="email" href="mailto:info@shapelets.io">info@shapelets.io</a>
+
+                        <ul class="list-inline banner-social-buttons">
+                            {% for social in site.social %}
+                            <li>
+                                <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="list-inline banner-nav">
+                                <li>
+                                        <a href="#home">Home</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                        <a href="#about">About</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                        <a href="#features">Features</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                        <a href="#contact">Contact</a>
+                                </li>
+                        </ul>
+                        <p class="copyright text-muted small">{{ site.copyright }}</p>
+                    </div>
+                </div>
+    
             </div>
-            <div class="col-md-4">
-                {{ site.credits }}
-            </div>
+            <!-- /.container -->
+    
         </div>
-    </div>
-</footer>
+    </section>
+    <!-- /.banner -->

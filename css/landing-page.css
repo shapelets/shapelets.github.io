@@ -4,6 +4,90 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ @font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/Flaticon.woff") format("woff");
+	font-weight: normal;
+	font-style: normal
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@font-face {
+	font-family: "Flaticon";
+	src: url("./Flaticon.svg#Flaticon") format("svg")
+}
+}
+
+p.address {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    padding-top: 15px;
+}
+
+a.email {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: #f8f8f8;
+}
+
+a.email:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: #f8f8f8;
+    text-decoration: underline;
+}
+
+ul.banner-nav > li > a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: #f8f8f8;
+}
+
+ul.banner-nav > li > a:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: #f8f8f8;
+    text-decoration: underline;
+}
+
+.center {
+    text-align:center;
+    margin-top: 100px;
+}
+
+.google-map {
+    height: 520px;
+    width: 100%;
+    position: relative;
+}
+
+.banner .container {
+    width: 100%;
+    padding: 0 0;
+}
+
+a {
+    color: #20145f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4d3d7d;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #20145f;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:active {
+    color: #4d3d7d;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    background-color: #cecddb;
+    color: #20145f;
+}
+
 body,
 html {
     width: 100%;
@@ -17,8 +101,52 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+  
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.navbar-default {
+    background-color: #f8f8fa;
+    border-color: #cecddb;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
 
 .lead {
@@ -31,20 +159,30 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/Pattern1.png) no-repeat center center;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .intro-message {
     position: relative;
     padding-top: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 42%;
 }
 
 .intro-message > h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    font-weight: 100;
+    font-size: 45px;
+    line-height: 60px;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.intro-message > h3 {
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-top: 5px;
 }
 
 .intro-divider {
@@ -53,13 +191,23 @@ h6 {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+ul.intro-social-buttons {
+    margin-top: 320px;
+}
+
+ul.intro-social-buttons > li > a {
+    color: #f8f8f8;
+    font-size: 22px;
+}
+
+ul.banner-social-buttons > li > a {
+    color: #f8f8f8;
+    font-size: 22px;
 }
 
 @media(max-width:767px) {
     .intro-message {
-        padding-bottom: 15%;
+        padding-bottom: 30%;
     }
 
     .intro-message > h1 {
@@ -90,13 +238,13 @@ h6 {
 
 .content-section-a {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: #20145f08;
 }
 
 .content-section-b {
     padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #cecddb;
+    border-bottom: 1px solid #cecddb;
 }
 
 .section-heading {
@@ -106,13 +254,12 @@ h6 {
 .section-heading-spacer {
     float: left;
     width: 200px;
-    border-top: 3px solid #e7e7e7;
+    border-top: 3px solid #20145f30;
 }
 
 .banner {
-    padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/BannerDark.jpg) no-repeat center center;
+    background-color: #20145f;
     background-size: cover;
 }
 
@@ -126,9 +273,45 @@ h6 {
     margin-bottom: 0;
 }
 
+.col-md-4 form .input-group {
+    border-bottom: 1px solid #dad8d8;
+}
+
+.col-md-4 form .input-group #submit.error i {
+	color: red !important;
+}
+
+.col-md-4 form .input-group #submit.success i {
+	color: green !important;
+}
+
+.col-md-4 form .input-group .input-group-addon {
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+}
+
+.col-md-4 form .input-group .form-control {
+    color: #dad8d8;
+    font-size: 18px;
+    background-color: transparent;
+    border:none;
+}
+
+.col-md-4 form .input-group .form-control::placeholder {
+    color: #dad8d8;
+    font-size: 18px;
+}
+
 .banner-social-buttons {
-    float: right;
-    margin-top: 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.banner-nav {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 15px;
 }
 
 @media(max-width:1199px) {
@@ -162,5 +345,7 @@ footer {
 }
 
 p.copyright {
-    margin: 10px 0 0;
+    font-weight: 100;
+    color: #f8f8f8;
+    margin-top: 15px;
 }

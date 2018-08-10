@@ -9,3 +9,84 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/landing-page.js"></script>
+
+<script>
+        /* Set google maps option draggable false on mobile*/
+        if ($(document).width() <= 767) {
+            var bMapoption = false;
+        } else {
+            var bMapoption = true;
+        }
+        
+        function initGoogleMaps(bMapoption) {
+        
+            /* lat/long used by Google Maps */
+            var myLatLng = new google.maps.LatLng(36.718308, -4.422883);
+            var myLatLngcenter = new google.maps.LatLng(36.718308, -4.422883);
+            /* options for the map */
+            var myOptions = {
+                scrollwheel: false,
+                zoom: 15,
+                center: myLatLngcenter,
+                draggable: bMapoption,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            /* placing the map object */
+            var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+            /* placing the marker with his options */
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Shapelets',
+                icon: '/img/maps_icon.png'
+            });
+            /* for responsive layouts */
+            google.maps.event.addDomListener(window, 'resize', function() {
+                map.setCenter(myLatLng);
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: '<p class="google-maps-window">Shapelets<br />C/Puerta del mar, 18 (2nd Floor)<br />29005 Málaga</p><a href="https://www.google.es/maps/place/Calle+Puerta+del+Mar,+18,+29005+M%C3%A1laga/@36.7182913,-4.4234758,19z/data=!4m5!3m4!1s0xd72f7942f117cf5:0x3c0a3fb21e2c03fc!8m2!3d36.7183021!4d-4.4229233" target="_blank">Directions</a>'
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+        
+        initGoogleMaps(bMapoption);
+</script>
+
+<script>
+    $(document).on('submit', '#news', function(e) {
+		e.preventDefault();	
+			$('.col-md-4 form .input-group #submit i').removeClass('fa fa-check');
+			$('.col-md-4 form .input-group #submit i').addClass('fa fa-spinner fa-spin');
+			$.ajax({
+				url : 'https://shapelets.us19.list-manage.com/subscribe?u=d13987dd7fdb6b54d2fbddef0&id=ee4e9119f5',
+				type : 'post',
+				data : $(this).serialize(),
+				success : function(data) {
+					$('.col-md-4 form .input-group #submit i').addClass('fa fa-check');
+					$('.col-md-4 form .input-group #submit i').removeClass('fa fa-spinner fa-spin');
+					$('.subscribe .success_msg').html("<p class='alert alert-success'><strong>Your Request was successfully sent.</strong> Thank you!</p>");
+			},
+			error : function(xhr, err) {
+				$('.col-md-4 form .input-group #submit i').addClass('fa fa-check');
+				$('.col-md-4 form .input-group #submit i').removeClass('fa fa-spinner fa-spin');
+				$('.subscribe .success_msg').html("<p class='alert alert-danger'>Oops!! An error occurred.</p>");
+			}
+		});
+		return false;
+	});
+
+    $(document).on('keyup', '#input', function(e) {
+		// console.log(e.keyCode);
+		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+        if(!pattern.test($(this).val()))
+        {
+        	$('#submit').removeClass('success').addClass('error');
+        }
+        else{
+        	$('#submit').removeClass('error').addClass('success');
+        }
+	});
+</script>
