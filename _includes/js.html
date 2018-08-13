@@ -17,9 +17,9 @@
         } else {
             var bMapoption = true;
         }
-        
+
         function initGoogleMaps(bMapoption) {
-        
+
             /* lat/long used by Google Maps */
             var myLatLng = new google.maps.LatLng(36.718308, -4.422883);
             var myLatLngcenter = new google.maps.LatLng(36.718308, -4.422883);
@@ -51,11 +51,22 @@
                 infowindow.open(map, marker);
             });
         }
-        
+
         initGoogleMaps(bMapoption);
+        // Initialize and add the map
+        // function initMap() {
+        //     // The location of Malaga
+        //     var malaga = {lat: 36.718308, lng:  -4.422883};
+        //     // The map, centered at Malaga
+        //     var map = new google.maps.Map(
+        //         document.getElementById('map_canvas'), {zoom: 15, center: malaga});
+        //     // The marker, positioned at Uluru
+        //     var marker = new google.maps.Marker({position: malaga, map: map});
+        // }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdVCW7cv8VuGwAkcIPukIgLopblUHTWnQ&callback=initMap"
-        async defer></script>
+
+<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdVCW7cv8VuGwAkcIPukIgLopblUHTWnQ&callback=initMap">
+</script>
 
 <script>
     $(document).on('submit', '#news', function(e) {

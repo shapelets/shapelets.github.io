@@ -1,8 +1,0 @@
----
-layout: default
-img: TimeSeriePC.png
-category: Features
-title: An open-source platform for<br>time-series analysis
-description: |
----
-Shapelets is an open framework that empowers users to leverage analytical capabilities in big data environments. Seamless integration with HDFS, Lustre and Ceph, reading data directly from columnar formats, like Parquet and ORC, and the usual tabular text files such as CSV.

@@ -1,8 +1,0 @@
----
-layout: default
-img: TimeSeries.png
-category: Features
-title: Efficient computation:<br>GPU - CPU & Multicore
-description: |
----
-Shapelets algorithms are the result of a thorough research process whereby each algorithm is selected based on applicability concerns and computational efficiency. Our code base runs on GPUs (using CUDA or OpenCL) and on multicores as well.
