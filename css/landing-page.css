@@ -708,6 +708,7 @@ a.get-started-button.about {
 .tales {
     width: 100%;
 }
+
 .carousel-inner{
     width:100%;
     background-color: #f8f8f8;
@@ -751,7 +752,7 @@ a.get-started-button.about {
     background-color: none;
     border-left-color: #001C6D;
     border-right-color: #612C8E;
-    border-style: solid;
+    /*border-style: solid;*/
     border-width: 1px;
     border-radius: 3px;
     padding-top: 10px;
