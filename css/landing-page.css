@@ -767,3 +767,7 @@ a.get-started-button.about {
     margin-top: 20px;
     text-decoration: none;
 }
+
+.google-maps-window{
+    color: #1b1f23;
+}
