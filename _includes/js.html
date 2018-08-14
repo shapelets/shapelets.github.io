@@ -17,55 +17,28 @@
         } else {
             var bMapoption = true;
         }
+        // Initialize and add the map
+        function initMap(bMapoption) {
+            // The location of Malaga
+            var malaga = {lat: 36.718308, lng:  -4.422883};
+            // The map, centered at Malaga
+            var map = new google.maps.Map(
+                document.getElementById('map_canvas'), {zoom: 15, center: malaga, zoom:15,  draggable: bMapoption, disableDefaultUI: true});
+            // The marker, positioned at Malaga
+            var marker = new google.maps.Marker({position: malaga, map: map, title: 'Shapelets', icon: '/img/maps_icon.png'});
 
-        function initGoogleMaps(bMapoption) {
-
-            /* lat/long used by Google Maps */
-            var myLatLng = new google.maps.LatLng(36.718308, -4.422883);
-            var myLatLngcenter = new google.maps.LatLng(36.718308, -4.422883);
-            /* options for the map */
-            var myOptions = {
-                scrollwheel: false,
-                zoom: 15,
-                center: myLatLngcenter,
-                draggable: bMapoption,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            /* placing the map object */
-            var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-            /* placing the marker with his options */
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Shapelets',
-                icon: '/img/maps_icon.png'
-            });
-            /* for responsive layouts */
-            google.maps.event.addDomListener(window, 'resize', function() {
-                map.setCenter(myLatLng);
-            });
+            var contentString = '<p class="google-maps-window">Shapelets<br />C/Puerta del mar, 18 (2nd Floor)<br />29005 Málaga</p><a href="https://www.google.es/maps/place/Calle+Puerta+del+Mar,+18,+29005+M%C3%A1laga/@36.7182913,-4.4234758,19z/data=!4m5!3m4!1s0xd72f7942f117cf5:0x3c0a3fb21e2c03fc!8m2!3d36.7183021!4d-4.4229233" target="_blank">Directions</a>'
             var infowindow = new google.maps.InfoWindow({
-                content: '<p class="google-maps-window">Shapelets<br />C/Puerta del mar, 18 (2nd Floor)<br />29005 Málaga</p><a href="https://www.google.es/maps/place/Calle+Puerta+del+Mar,+18,+29005+M%C3%A1laga/@36.7182913,-4.4234758,19z/data=!4m5!3m4!1s0xd72f7942f117cf5:0x3c0a3fb21e2c03fc!8m2!3d36.7183021!4d-4.4229233" target="_blank">Directions</a>'
+                content: contentString
             });
-            google.maps.event.addListener(marker, 'click', function() {
+            marker.addListener('click', function() {
                 infowindow.open(map, marker);
             });
         }
-
-        initGoogleMaps(bMapoption);
-        // Initialize and add the map
-        // function initMap() {
-        //     // The location of Malaga
-        //     var malaga = {lat: 36.718308, lng:  -4.422883};
-        //     // The map, centered at Malaga
-        //     var map = new google.maps.Map(
-        //         document.getElementById('map_canvas'), {zoom: 15, center: malaga});
-        //     // The marker, positioned at Uluru
-        //     var marker = new google.maps.Marker({position: malaga, map: map});
-        // }
 </script>
 
-<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdVCW7cv8VuGwAkcIPukIgLopblUHTWnQ&callback=initMap">
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrVv2fVb9KNWQMKIRcpV4y6e9R34CCiwU&callback=initMap">
 </script>
 
 <script>
