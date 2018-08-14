@@ -25,6 +25,10 @@
     background-size: cover;
 }
 
+.showcarousel .showcarousel-text {
+    padding: 3rem;
+}
+
 @media (min-width: 768px) {
     .showcase .showcase-text {
         padding: 7rem;
@@ -711,7 +715,7 @@ a.get-started-button.about {
 
 .carousel-inner{
     width:100%;
-    background-color: #f8f8f8;
+    background-color: #f9f9f9 !important;
     max-height: 250px !important;
     min-height: 200px !important;
 }
