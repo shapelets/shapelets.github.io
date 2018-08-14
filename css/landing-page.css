@@ -69,7 +69,7 @@ ul.banner-nav > li > a:hover {
 
 .center {
     text-align:center;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .google-map {
@@ -322,13 +322,12 @@ ul.banner-social-buttons > li > a {
 }
 
 .banner-social-buttons {
-    text-align: center;
     margin-top: 40px;
 }
 
 .banner-nav {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 70px;
     margin-bottom: 15px;
 }
 
@@ -350,6 +349,7 @@ ul.banner-social-buttons > li > a {
         display: block;
         margin-bottom: 20px;
         padding: 0;
+        align-content: center;
     }
 
     ul.banner-social-buttons > li:last-child {
@@ -770,4 +770,8 @@ a.get-started-button.about {
 
 .google-maps-window{
     color: #1b1f23;
+}
+
+li.list-inline {
+    text-align: center
 }
