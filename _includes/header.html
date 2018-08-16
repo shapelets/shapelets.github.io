@@ -3,18 +3,19 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#home"><img style="width: 180px; height: 50px;" src={{ site.image }} alt={{ site.title }} /></a>
+            <a href="#home"><img style="width: 180px; height: 50px;" src={{ site.image }} alt={{ site.title }}/></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-            	<li>
+                <li>
                     <a class="page-scroll" href="#project">Project</a>
                 </li>
                 <li>
@@ -31,42 +32,47 @@
 </nav>
 
 <section id="home">
-<!-- Header -->
-	<div class="intro-header">
+    <!-- Header -->
+    <div class="intro-header">
 
-		<div class="container">
+        <div class="container">
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="intro-message">
-						<h1 class="animated fadeInUp">{{ page.title }}</h1>
-						<h3 class="animated fadeInUp">{{ page.subTitle }}</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1 class="animated fadeInUp">{{ page.title }}</h1>
+                        <h3 class="animated fadeInUp">{{ page.subTitle }}</h3>
                         <div style="text-align:center;">
-                                <div class="row">
-                                    <p style="padding-top: 80px; padding-bottom: 30px; font-size:18px;">Subscribe to our newsletter for our latest updates!</p>
-                                </div>
+                            <div class="row">
+                                <p style="padding-top: 80px; padding-bottom: 30px; font-size:18px;">Subscribe to our
+                                    newsletter for our latest updates!</p>
+                            </div>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
-							<div class="row">
-								<div class="success_msg"></div>
-								<form method="post" id="news">
-									<div class="input-group">
+                            <div class="row">
+                                <div class="success_msg"></div>
+                                <form method="post" id="news">
+                                    <div class="input-group">
                                         <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
                                         <input type="hidden" name="id" value="ee4e9119f5">
-										<input type="email" class="form-control" placeholder="Enter your email here" required="" id="input" name="MERGE0" id="MERGE0">
-                                        
+                                        <input type="email" class="form-control" placeholder="Enter your email here"
+                                               required="" id="input" name="MERGE0" id="MERGE0">
+
                                         <span class="input-group-btn">
-											<button style="background: transparent; border: none" class="btn btn-default" id="submit" type="submit" name="submit"><i style="color: #dad8d8;" class="fa fa-check"></i></button>
+											<button style="background: transparent; border: none"
+                                                    class="btn btn-default" id="submit" type="submit" name="submit"><i
+                                                    style="color: #dad8d8;" class="fa fa-check"></i></button>
 										</span>
-									</div>
-									<!-- /input-group -->
-								</form>
-							</div>
+                                    </div>
+                                    <!-- /input-group -->
+                                </form>
+                            </div>
                         </div>
                         <br/>
                         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                             <div class="row">
-                                <ul class="list-inline intro-social-buttons">
+                                <ul class="list-inline banner-social-buttons center" style=" align-content: center;
+                    justify-content:center; display: flex; width: 100%;margin: 0;padding: 0; margin-top: 30px">
                                     {% for social in site.social %}
                                     <li>
                                         <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
@@ -75,13 +81,13 @@
                                 </ul>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
 
-		</div>
-		<!-- /.container -->
+        </div>
+        <!-- /.container -->
 
-	</div>
-	<!-- /.intro-header -->
+    </div>
+    <!-- /.intro-header -->
 </section>
