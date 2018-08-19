@@ -79,3 +79,28 @@
         }
 	});
 </script>
+
+<script>
+    if (matchMedia) {
+        const mq = window.matchMedia("(max-width: 600px)");
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+    }
+
+    function WidthChange(mq) {
+        let bios = document.getElementsByClassName("bio-card immobile");
+        if (mq.matches) {
+            $(".bio-card").addClass("mobile").removeClass("immobile");
+        } else {
+            $(".bio-card").removeClass("mobile").addClass("immobile");
+        }
+    }
+    $(".team-member").on("click", ".bio-card", function(event) {
+        $(".bio-card").removeClass("active");
+        $(event.currentTarget).addClass("active");
+    });
+    $(".bio-card").children(".exit-button").on("click", function(event) {
+        event.stopPropagation();
+        $(event.currentTarget).parent().removeClass("active");
+    });
+</script>
