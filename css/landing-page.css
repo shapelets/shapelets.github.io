@@ -519,6 +519,10 @@ a.get-started-button.about {
     color: #F9EFD0;
     cursor: pointer; }
 
+.team-bio-text{
+    text-align: left;
+}
+
 .team-member.col3 .team-bio {
     left: unset;
     right: 80%; }
