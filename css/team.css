@@ -133,6 +133,7 @@ a.get-started-button.about {
     font-size: 1.35em !important; }
 
 .bio-card.active.mobile .team-bio, .bio-card.active.mobile .team-bio-board {
+    margin-top: 80px;
     height: 100vh;
     z-index: 200;
     opacity: 1;
@@ -141,7 +142,7 @@ a.get-started-button.about {
     font-size: 1.75em; }
 
 .mobile.bio-card.active .exit-button {
-    margin-top: 60px;
+    margin-top: 55px;
     display: block;
     position: fixed;
     right: 20px;
