@@ -1,41 +1,39 @@
 <section id="contact">
     <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="map_canvas" class="google-map"></div>
-                </div>
-                <div class="col-md-6 center">
-                    <a href="#home"><img src="../img/shapelets-negativo.png"/></a>
-                    <p class="address">C/Puerta del mar, 18 (2nd Floor) / Málaga, Spain 29005</p>
-                    <p><a class="email" href="mailto:info@shapelets.io">info@shapelets.io</a></p>
-                    <ul class="list-inline banner-social-buttons center" style=" align-content: center;
-                    justify-content:center; display: flex; width: 100%;margin-top:30px;padding: 0; margin-top: 30px">
-                        {% for social in site.social %}
-                        <li>
-                            <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <ul class="list-inline banner-nav">
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#project">Project</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#team">Team</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">{{ site.copyright }}</p>
-                </div>
+        <div class="container" id="footer">
+            <div class="map-left">
+                <div id="map_canvas" class="google-map"></div>
+            </div>
+            <div class="contact-right">
+                <a href="#home"><img src="../img/shapelets-negativo.png"/></a>
+                <p class="address">C/Puerta del mar, 18 (2nd Floor) / Málaga, Spain 29005</p>
+                <p><a class="email" href="mailto:info@shapelets.io">info@shapelets.io</a></p>
+                <ul class="list-inline banner-social-buttons center" style=" align-content: center;
+                justify-content:center; display: flex; width: 100%;margin-top:30px;padding: 0; margin-top: 30px">
+                    {% for social in site.social %}
+                    <li>
+                        <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <ul class="list-inline banner-nav">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#project">Project</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">{{ site.copyright }}</p>
             </div>
         </div>
     </div>

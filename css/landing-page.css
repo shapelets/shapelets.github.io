@@ -67,24 +67,44 @@ ul.banner-nav > li > a:hover {
     text-decoration: underline;
 }
 
-.center {
+.map-left {
+    float: left;
+    width: 50%;
+}
+
+.contact-right {
+    float: right;
+    width: 50%;
     text-align:center;
     margin-top: 70px;
 }
 
+@media(max-width:767px) {
+    .map-left {
+        float: none;
+        width: 100%;
+    }
+
+    .contact-right {
+        float: none;
+        width: 100%;
+    }
+}
+
 .google-map {
-    height: 520px;
+    height: 535px;
     width: 100%;
     position: relative;
 }
 
-.banner .container {
+#footer {
     width: 100%;
-    padding: 0 0;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 a {
-    color: #20145f;
+    color: #7b6fbb;
     text-decoration: none;
 }
 
@@ -95,6 +115,7 @@ a:hover {
 
 .navbar-default .navbar-nav>li>a {
     color: #20145f;
+    font-weight: 300;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:active {

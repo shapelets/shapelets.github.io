@@ -145,10 +145,10 @@ a.get-started-button.about {
     margin-top: 55px;
     display: block;
     position: fixed;
-    right: 20px;
-    top: -20px;
+    right: 5px;
+    top: -15px;
     z-index: 201;
-    font-size: 7em;
+    font-size: 4em;
     color: #F9EFD0;
     cursor: pointer; }
 
