@@ -47,6 +47,16 @@ a.email {
     color: #f8f8f8;
 }
 
+a.email-violet {
+    color: #7b6fbb;
+    text-decoration: none;
+}
+
+a.email-violet:hover {
+    color: #4d3d7d;
+    text-decoration: none;
+}
+
 a.email:hover {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
