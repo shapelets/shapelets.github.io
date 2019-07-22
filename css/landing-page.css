@@ -508,3 +508,7 @@ li.list-inline {
         display: block;
       }
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
