@@ -32,7 +32,7 @@
 </nav>
 
 <section id="home">
-        <a class="github-fork-ribbon right-top" href="https://github.com/shapelets" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+        <a target="_blank" class="github-fork-ribbon right-top" href="https://github.com/shapelets" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <!-- Header -->
     <div class="intro-header">
         <div class="container">
@@ -71,12 +71,8 @@
                         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                             <div class="row">
                                 <ul class="list-inline banner-social-buttons center" style=" align-content: center;
-                    justify-content:center; display: flex; width: 100%;margin: 0;padding: 0; margin-top: 60%">
-                                    {% for social in site.social %}
-                                    <li>
-                                        <a href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
-                                    </li>
-                                    {% endfor %}
+                                justify-content:center; display: flex; width: 100%;margin: 0;padding: 0; margin-top: 60%">
+                                    {% include social.html %}
                                 </ul>
                             </div>
                         </div>

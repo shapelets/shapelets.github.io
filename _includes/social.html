@@ -1,0 +1,5 @@
+{% for social in site.social %}
+<li>
+    <a target="_blank" href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
+</li>
+{% endfor %}
