@@ -1,0 +1,49 @@
+<div id="view"></div>
+<script type="text/javascript">
+    let view;
+    let time = 0;
+    let data = [];
+    fetch('assets/vegaSpec.json')
+        .then(res => res.json())
+        .then(spec => render(spec))
+        .catch(err => console.error(err));
+
+    function render(spec) {
+        view = new vega.View(vega.parse(spec), {
+        renderer:  'canvas',  // renderer (canvas or svg)
+        container: '#view',   // parent DOM container
+        hover:     true       // enable hover processing
+        });
+        view.width(document.getElementById('view').offsetWidth);
+        return view.runAsync();
+    }
+
+    function updateData(x,y){
+        data.push({x : time, y : x, c: 0});
+        data.push({x : time, y : y, c: 1});
+        if(data.length > 1024){
+            data.splice(0,2);
+        }
+        if(view){
+            view.remove('table', () => true).run();
+            view.insert('table', data).run();
+        }
+    }
+
+    document.onmousemove = function(e) {
+        var event = e || window.event;
+        window.mouseX = event.clientX;
+        window.mouseY = event.clientY;
+    }
+
+    function mousemov(){
+        updateData(window.mouseX, window.mouseY);
+    }
+
+    window.onload = function(){
+        setInterval(() => {
+            mousemov();
+            time++;
+        }, 1000/30);
+    }
+</script>
