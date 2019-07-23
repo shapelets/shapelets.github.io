@@ -5,7 +5,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'source-sans-pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 18px; }
+    font-size: 18px;
+    overflow-x: hidden;
+}
 
 ul {
     list-style: none; }
@@ -338,6 +340,10 @@ a.get-started-button.about {
 
 @media (max-width: 500px) {
     .hero__upper {
-        height: 22em; }
+        height: 22em;
+    }
+    
     .hero__upper-text {
-        font-weight: 300; } }
+        font-weight: 300;
+    }    
+}
