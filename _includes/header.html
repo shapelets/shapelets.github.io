@@ -16,7 +16,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#project">Project</a>
+                    <a class="page-scroll" href="#features">Features</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#solutions">Solutions</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#team">Team</a>
@@ -24,6 +27,9 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+                <div style="line-height: 50px;float: right;">
+                    <a class="btn btn-primary btn-md" href="#contact">Request a demo</a>
+                </div>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -32,7 +38,6 @@
 </nav>
 
 <section id="home">
-        <a target="_blank" class="github-fork-ribbon right-top" href="https://github.com/shapelets" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <!-- Header -->
     <div class="intro-header">
         <div class="container">
@@ -41,46 +46,15 @@
                     <div class="intro-message">
                         <h1 class="animated fadeInUp">{{ page.title }}</h1>
                         <h3 class="animated fadeInUp">{{ page.subTitle }}</h3>
-                        <div style="text-align:center;">
-                            <div class="row">
-                                <p style="padding-top: 80px; padding-bottom: 30px; font-size:18px;">Subscribe to our
-                                    newsletter for our latest updates!</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="row">
-                                <div class="success_msg"></div>
-                                <form method="post" id="news">
-                                    <div class="input-group">
-                                        <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
-                                        <input type="hidden" name="id" value="ee4e9119f5">
-                                        <input type="email" class="form-control" placeholder="Enter your email here"
-                                               required="" id="input" name="MERGE0" id="MERGE0">
-
-                                        <span class="input-group-btn">
-											<button style="background: transparent; border: none"
-                                                    class="btn btn-default" id="submit" type="submit" name="submit"><i
-                                                    style="color: #dad8d8;" class="fa fa-check"></i></button>
-										</span>
-                                    </div>
-                                    <!-- /input-group -->
-                                </form>
-                            </div>
-                        </div>
-                        <br/>
-                        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                            <div class="row">
-                                <ul class="list-inline banner-social-buttons center" style=" align-content: center;
-                                justify-content:center; display: flex; width: 100%;margin: 0;padding: 0; margin-top: 60%">
-                                    {% include social.html %}
-                                </ul>
-                            </div>
+                        <div style="line-height: 50px;">
+                            <a class="btn btn-primary btn-md" href="#contact">Request a demo</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.container -->
+        {% include chart.html %}
     </div>
     <!-- /.intro-header -->
 </section>
