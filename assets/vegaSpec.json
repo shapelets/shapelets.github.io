@@ -12,10 +12,6 @@
       "values": []
     }
   ],
-  "scheme" : [
-    "#ff0000",
-    "#00ff00"
-  ],
   "scales": [
     {
       "name": "x",
@@ -34,7 +30,7 @@
     {
       "name": "color",
       "type": "ordinal",
-      "range": ["#20145F", "#EBE717"],
+      "range": ["#20145f", "#EBE717"],
       "domain": {"data": "table", "field": "c"}
     }
   ],
