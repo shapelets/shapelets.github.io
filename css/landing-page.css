@@ -541,13 +541,40 @@ li.list-inline {
 
 section#features {
     padding: 16px;
-    background: rgb(250, 250, 250);
+    background: rgb(245, 245, 245);
 }
 
 section#features h1.title{
+    margin-top: 40px;
     text-align: center;
 }
 
 section#features .features {
     margin: 40px auto;
+    text-align: center;
+}
+
+section#features .features .card {
+    border: 0;
+    transition: all 0.5s;
+}
+
+section#features .features .card:hover {
+    -webkit-box-shadow: -2px -3px 47px -15px rgba(0,0,0,0.35);
+    -moz-box-shadow: -2px -3px 47px -15px rgba(0,0,0,0.35);
+    box-shadow: -2px -3px 47px -15px rgba(0,0,0,0.35);
+    transition: all 0.5s;
+}
+
+section#features .features .card img {
+    transition: all 0.5s;
+}
+
+section#features .features .card img:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+section#features .features .card-text{
+    font-size: 18px;
 }
