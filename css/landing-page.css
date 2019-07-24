@@ -4,6 +4,25 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+::-webkit-scrollbar{
+	width: 8px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: rgb(236, 236, 236);
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: rgb(165, 165, 165);
+	outline: 2px solid #FFF;
+	outline-offset: -2px;
+	border: .1px solid #B7B7B7;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
+}
+
 @font-face {
     font-family: "Flaticon";
     src: url("../fonts/Flaticon.woff") format("woff");
@@ -516,4 +535,19 @@ li.list-inline {
 
 #view{
     margin: auto;
+}
+
+/* section features */
+
+section#features {
+    padding: 16px;
+    background: rgb(250, 250, 250);
+}
+
+section#features h1.title{
+    text-align: center;
+}
+
+section#features .features {
+    margin: 40px auto;
 }
