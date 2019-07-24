@@ -1,11 +1,11 @@
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!-- Plugin JavaScript -->
-    <script src="{{ "js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ "js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="js/landing-page.js"></script>
@@ -102,5 +102,24 @@
     $(".bio-card").children(".exit-button").on("click", function(event) {
         event.stopPropagation();
         $(event.currentTarget).parent().removeClass("active");
+    });
+</script>
+
+<script>
+    $('#contactForm').submit(event => {
+        event.preventDefault();
+
+        let form = {
+            firstName : $('input[name="firstName"]').val(),
+            lastName : $('input[name="lastName"]').val(),
+            companyName : $('input[name="companyName"]').val(),
+            companyEmail : $('input[name="companyEmail"]').val(),
+            jobRole : $('input[name="jobRole"]').val(),
+            phone : $('input[name="phone"]').val()
+        };
+
+        $.post('http://localhost:3001/api/contact', form, (data) => {
+            console.log('data',data);
+        });
     });
 </script>
