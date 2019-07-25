@@ -821,35 +821,42 @@ section#footer .social li:hover{
     color: white;
 }
 
-.modal-content {
+#contact .modal-content {
     background: #1d9add;
     padding-left: 40px;
     padding-right: 40px;
 }
 
-.modal-header{
+#contact .modal-header{
     border-bottom: 0px;
     display: inline-block;
     text-align: center;
     color: white;
 }
 
-.modal-header h5{
+#contact .modal-header h5{
     font-size: 30px;
 }
 
-.modal-content input {
+#contact .modal-content input {
     width: 100%;
     display: block;
     margin: 20px auto;
     padding: 10px;
 }
 
-.modal-content textarea {
+#contact .modal-content textarea {
     padding: 10px;
 }
 
-.modal-content input[type="submit"]{
+#contact .modal-content button[type="submit"]{
     background: rgb(214, 83, 83);
     font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+#contact .contact-message {
+    display: none;
+    color: white;
 }
