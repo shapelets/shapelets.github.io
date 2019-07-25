@@ -1,9 +1,21 @@
-<form id="contactForm">
-    <input type="text" name="firstName" placeholder="firstName" />
-    <input type="text" name="lastName" placeholder="lastName" />
-    <input type="text" name="companyName" placeholder="companyName" />
-    <input type="email" name="companyEmail" placeholder="companyEmail" />
-    <input type="text" name="jobRole" placeholder="jobRole" />
-    <input type="phone" name="phone" placeholder="phone" />
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
+<!-- Modal -->
+<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Schedule a Demo</h5>
+    </div>
+    <div class="modal-body">
+        <form id="contactForm">
+            <input type="text" name="firstName" placeholder="First Name *" />
+            <input type="text" name="lastName" placeholder="Last Name *" />
+            <input type="email" name="companyEmail" placeholder="Email address*" />
+            <input type="text" name="companyName" placeholder="Company Name *" />
+            <input type="phone" name="phone" placeholder="Phone (optional)" />
+            <textarea name="description" rows="6" style="width: 100%;" placeholder="Tell us about your project and how we can help you"></textarea>
+            <input class="btn btn-primary" type="submit" value="SUBMIT">
+        </form>
+    </div>
+    </div>
+</div>
+</div>

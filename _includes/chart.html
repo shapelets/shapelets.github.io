@@ -18,16 +18,23 @@
         return view.runAsync();
     }
 
+    let previuousX = 0, previuousY = 0;
     function updateData(x,y){
-        data.push({x : time, y : x, c: 0});
-        data.push({x : time, y : y, c: 1});
-        if(data.length > 1024){
-            data.splice(0,2);
+        let movementX = x - previuousX;
+        let movementY = y - previuousY;
+        data.push({x : time, y : x, c: 0}); //mouseX
+        data.push({x : time, y : y, c: 1}); //mouseY
+        let velocity = Math.sqrt(movementX*movementX+movementY*movementY) * 10;
+        data.push({x : time, y : velocity, c: 2}); //valocity
+        if(data.length >= 768){
+            data.splice(0,3);
         }
         if(view){
             view.remove('table', () => true).run();
             view.insert('table', data).run();
         }
+        previuousX = x;
+        previuousY = y;
     }
 
     document.onmousemove = function(e) {

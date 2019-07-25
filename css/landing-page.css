@@ -4,6 +4,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.c-purple{
+    color: #20145f;
+}
+
+.c-blue{
+    color: #1d9add;
+}
+
+.bg-purple{
+    background: #20145f;
+}
+
+.bg-blue{
+    background: #1d9add;
+}
+
+.scroll-animations div{
+    opacity: 0;
+}
+
 ::-webkit-scrollbar{
 	width: 8px;
 }
@@ -147,6 +167,13 @@ a:hover {
     font-weight: 300;
 }
 
+.nav-shadow {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.35);
+    transition: all 0.5s;
+}
+
 .navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:active {
     color: #4d3d7d;
 }
@@ -224,7 +251,7 @@ h6 {
 
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     text-align: center;
     color : #20145F;
     background-size: cover;
@@ -241,7 +268,6 @@ h6 {
     font-weight: bold;
     font-size: 45px;
     line-height: 60px;
-    letter-spacing: 2px;
     margin-bottom: 5px;
     text-transform: uppercase;
 }
@@ -249,7 +275,7 @@ h6 {
 .intro-message > h3 {
     font-size: 23px;
     line-height: 40px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 3px;
     margin-top: 5px;
 }
@@ -343,15 +369,17 @@ ul.banner-social-buttons > li > a {
 }
 
 .col-md-4 form .input-group {
-    border-bottom: 1px solid #dad8d8;
+    border-bottom: 1px solid white;
+    width: 300px;
+    margin: auto;
 }
 
 .col-md-4 form .input-group #submit.error i {
-    color: red !important;
+    color: white !important;
 }
 
 .col-md-4 form .input-group #submit.success i {
-    color: green !important;
+    color: white !important;
 }
 
 .col-md-4 form .input-group .input-group-addon {
@@ -361,14 +389,14 @@ ul.banner-social-buttons > li > a {
 }
 
 .col-md-4 form .input-group .form-control {
-    color: #dad8d8;
+    color: white;
     font-size: 18px;
     background-color: transparent;
     border:none;
 }
 
 .col-md-4 form .input-group .form-control::placeholder {
-    color: #dad8d8;
+    color: white;
     font-size: 18px;
 }
 
@@ -441,6 +469,7 @@ a.get-started-button.about {
 
 .team-bio-text{
     text-align: left;
+    font-size: 1em;
 }
 
 /*News Section*/
@@ -535,27 +564,34 @@ li.list-inline {
 
 #view{
     margin: auto;
+    margin-top: -100px;
 }
 
 /* section features */
 
 section#features {
     padding: 16px;
-    background: rgb(245, 245, 245);
+    background: white;
 }
 
 section#features h1.title{
     margin-top: 40px;
+    font-size: 32px;
     text-align: center;
 }
 
 section#features .features {
-    margin: 40px auto;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
     text-align: center;
 }
 
 section#features .features .card {
     border: 0;
+    -webkit-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -6px rgba(0,0,0,0.75);
     transition: all 0.5s;
 }
 
@@ -575,6 +611,245 @@ section#features .features .card img:hover{
     transition: all 0.5s;
 }
 
-section#features .features .card-text{
+
+section#features .features .card-title{
     font-size: 18px;
+}
+
+section#features .features .card-text{
+    font-size: 15px;
+}
+
+/* section solutions */
+
+section#solutions{
+    padding: 64px 0;
+}
+
+section#solutions h1.title{
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+section#solutions h2.title{
+    margin-top: 40px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+section#solutions .row{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+section#solutions p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+section#solutions p span {
+    color: #1D9ADD;
+}
+
+/* section who */
+
+section#who{
+    padding: 64px 0;
+    background: #1D9ADD;
+    color: white;
+}
+
+section#who h1.title{
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+section#who .row{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+section#who p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+section#who .who-text {
+    max-width: 360px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* section team */
+
+section#team{
+    padding: 64px 0;
+}
+
+section#team h1.title{
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 64px;
+}
+
+section#team .row{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+section#team .line{
+    height: 1px;
+    width: 60%;
+    background: grey;
+    margin: 48px auto;
+}
+
+section#team div.hiring {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+section#team div.hiring::after {
+    content: "";
+    background-image: url(/assets/images/isotype.svg);
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+}
+
+section#team div.hiring h1.title {
+    margin: 20px auto;
+}
+
+/* section footer */
+
+section#footer{
+    position: relative;
+    overflow: auto;
+    background: #1d9add;
+    color: white;
+}
+
+section#footer .row {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+section#footer .row.first {
+    margin: 80px auto;
+}
+
+section#footer .email a {
+    text-decoration: none;
+    color: white;
+}
+
+section#footer .map a {
+    text-decoration: none;
+    color: white;
+}
+
+section#footer .social ul.ul-social {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+
+@media screen and (max-width : 756px) {
+    section#footer .social ul.ul-social {
+        position: relative;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        text-align: center;
+    }
+}
+
+section#footer .social ul{
+    text-align: left;
+    display: inline-block;
+}
+
+section#footer .social li{
+    margin: 30px auto;
+}
+
+section#footer .social li a {
+    color: white;
+}
+
+section#footer .social li i {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+section#footer .social li {
+    transition: all 0.5s;
+}
+
+section#footer .social li:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.request-a-demo {
+    border-radius: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #1d9add;
+    color: white;
+    font-weight: 600;
+}
+
+.request-a-demo:hover {
+    color: white;
+}
+
+.modal-content {
+    background: #1d9add;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.modal-header{
+    border-bottom: 0px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+.modal-header h5{
+    font-size: 30px;
+}
+
+.modal-content input {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.modal-content textarea {
+    padding: 10px;
+}
+
+.modal-content input[type="submit"]{
+    background: rgb(214, 83, 83);
+    font-weight: bold;
 }
