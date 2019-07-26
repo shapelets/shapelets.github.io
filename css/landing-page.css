@@ -704,10 +704,10 @@ section#team .row{
     margin: auto;
 }
 
-section#team .line{
+.line{
     height: 1px;
     width: 60%;
-    background: grey;
+    background: rgb(228, 228, 228);
     margin: 48px auto;
 }
 
