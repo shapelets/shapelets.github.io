@@ -3,9 +3,11 @@
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'source-sans-pro', Helvetica, Arial, sans-serif;
+    font-family: Open Sans;
     font-weight: 400;
-    font-size: 18px; }
+    font-size: 18px;
+    overflow-x: hidden;
+}
 
 ul {
     list-style: none; }
@@ -59,7 +61,7 @@ a.get-started-button.about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5em; }
+    margin-bottom: 1em; }
 
 .text-gray-title {
     font-size: 0.85em;
@@ -69,7 +71,7 @@ a.get-started-button.about {
     position: relative; }
 
 .profiles__portrait {
-    border-radius: 25em;
+    border-radius: 4px;
     width: 14em;
     height: 14em;
     margin-bottom: 1em; }
@@ -139,7 +141,7 @@ a.get-started-button.about {
     opacity: 1;
     color: #fff;
     padding: 0 2.5em;
-    font-size: 1.75em; }
+    font-size: 1em; }
 
 .mobile.bio-card.active .exit-button {
     margin-top: 55px;
@@ -338,6 +340,10 @@ a.get-started-button.about {
 
 @media (max-width: 500px) {
     .hero__upper {
-        height: 22em; }
+        height: 22em;
+    }
+    
     .hero__upper-text {
-        font-weight: 300; } }
+        font-weight: 300;
+    }    
+}

@@ -1,36 +1,54 @@
-<section id="contact">
-    <div class="banner">
-        <div class="container" id="footer">
-            <div class="map-left">
-                <div id="map_canvas" class="google-map"></div>
+<section id="footer" style="padding: 40px;">
+    <div class="row first">
+        <div id="getInTouch" class="col-md-4" style="min-height: 290px;">
+            <h3 style="line-height: 80px;">Get in touch</h3>
+            <p>
+                <div class="email font-weight-bold"><a href="mailto:info@shapelets.io">info@shapelets.io</a></div>
+                <br>
+                <p>
+                    Calle Puerta del Mar 18, 2ª Planta
+                    <br>
+                    29005, Málaga
+                    <br>
+                    Spain
+                </p>
+                <div class="map font-weight-bold"><a href="https://www.google.com/maps/place/Shapelets/@36.7183064,-4.425112,17z/data=!3m1!4b1!4m5!3m4!1s0xd72f7360e703449:0x522d1646873b5e47!8m2!3d36.7183021!4d-4.4229233" target="_blank">View on map</a></div>
+            </p>
+        </div>
+        <div class="col-md-4 text-center" style="min-height: 290px;">
+            <img class="mb-4" src="/assets/images/shapelets-vertical-white.png" width="140px" alt="">
+            <div style="position: absolute;bottom: 0; left: 50%; transform: translate(-50%,0);">
+            <h5 class="mb-4">NEWSLETTER</h5>
+            <form method="post" id="news">
+                <div class="input-group">
+                    <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
+                    <input type="hidden" name="id" value="ee4e9119f5">
+                    <input type="email" class="form-control" placeholder="Enter your email here" required="" id="input" name="MERGE0" id="MERGE0">
+                    <span class="input-group-btn">
+                        <button style="background: transparent; border: none"
+                                class="btn btn-default" id="submit" type="submit" name="submit">
+                            <i style="color: white;" class="fa fa-check"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </form>
+            <div class="success_msg"></div>
             </div>
-            <div class="contact-right">
-                <a href="#home"><img src="../img/shapelets-negativo.png"/></a>
-                <p class="address">C/Puerta del mar, 18 (2nd Floor) / Málaga, Spain 29005</p>
-                <p><a class="email" href="mailto:info@shapelets.io">info@shapelets.io</a></p>
-                <ul class="list-inline banner-social-buttons center" style=" align-content: center;
-                justify-content:center; display: flex; width: 100%;margin-top:30px;padding: 0; margin-top: 30px">
-                    {% include social.html %}
-                </ul>
-                <ul class="list-inline banner-nav">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#project">Project</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#team">Team</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
+        </div>
+        <div class="col-md-4 text-right social" style="min-height: 290px;">
+            <ul class="ul-social">
+                {% for social in site.social %}
+                <li>
+                    <a target="_blank" href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i> {{social.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="copyright small">&copy;<script>document.write(new Date().getFullYear())</script> {{ site.copyright }}</p>
         </div>
     </div>
 </section>

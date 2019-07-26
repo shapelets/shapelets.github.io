@@ -9,7 +9,7 @@ email: info@shapelets.io
 author: The Grumpy Cat
 description: > # "Write an awesome description for your new site here.
   Shapelets is an open source framework for time series analysis in big data environments. Easy to integrate with any database, high-performance (GPUs, CPU and multicore) and scalable.
-copyright: '©2018 Shapelets. All Rights Reserved.'
+copyright: 'Shapelets. All Rights Reserved.'
 credits: 'Contact: <a href="mailto:info@shapelets.io">info@shapelets.io</a>'
 
 # ----------------------- #
@@ -27,7 +27,13 @@ permalink: pretty
 social:
   - title: twitter
     url: https://twitter.com/shapelets
+    name : On Twitter
   - title: github
     url: https://github.com/shapelets
+    name: On Github
   - title: linkedin
     url: https://www.linkedin.com/company/shapelets/
+    name: On Linkedin
+  - title: youtube
+    url: https://www.youtube.com/channel/UC5fBWX8IMdT-G4a8gNZXzgg
+    name: On Youtube

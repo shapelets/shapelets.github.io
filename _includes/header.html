@@ -1,38 +1,32 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: white;">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#home"><img style="width: 180px; height: 50px;" src={{ site.image }} alt={{ site.title }}/></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#project">Project</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#team">Team</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
+        <a href="#home"><img height="80px" src={{ site.image }} alt={{ site.title }}/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+            <li class="nav-item" style="margin: auto 20px;">
+                <a class="page-scroll c-purple font-weight-bold" href="#features">FEATURES</a>
+            </li>
+            <li class="nav-item" style="margin: auto 20px;">
+                <a class="page-scroll c-purple font-weight-bold" href="#solutions">SOLUTIONS</a>
+            </li>
+            <li class="nav-item" style="margin: auto 20px;">
+                <a class="page-scroll c-purple font-weight-bold" href="#team">TEAM</a>
+            </li>
+            <li class="nav-item" style="margin: auto 20px;">
+                <a class="page-scroll c-purple font-weight-bold" href="#footer">CONTACT</a>
+            </li>
             </ul>
+            <div style="line-height: 50px;float: right;margin: auto 20px;">
+                <a class="btn btn-md request-a-demo rad" style="color: white;cursor: pointer;">REQUEST A DEMO</a>
+            </div>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
-
 <section id="home">
-        <a target="_blank" class="github-fork-ribbon right-top" href="https://github.com/shapelets" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <!-- Header -->
     <div class="intro-header">
         <div class="container">
@@ -41,46 +35,15 @@
                     <div class="intro-message">
                         <h1 class="animated fadeInUp">{{ page.title }}</h1>
                         <h3 class="animated fadeInUp">{{ page.subTitle }}</h3>
-                        <div style="text-align:center;">
-                            <div class="row">
-                                <p style="padding-top: 80px; padding-bottom: 30px; font-size:18px;">Subscribe to our
-                                    newsletter for our latest updates!</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="row">
-                                <div class="success_msg"></div>
-                                <form method="post" id="news">
-                                    <div class="input-group">
-                                        <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
-                                        <input type="hidden" name="id" value="ee4e9119f5">
-                                        <input type="email" class="form-control" placeholder="Enter your email here"
-                                               required="" id="input" name="MERGE0" id="MERGE0">
-
-                                        <span class="input-group-btn">
-											<button style="background: transparent; border: none"
-                                                    class="btn btn-default" id="submit" type="submit" name="submit"><i
-                                                    style="color: #dad8d8;" class="fa fa-check"></i></button>
-										</span>
-                                    </div>
-                                    <!-- /input-group -->
-                                </form>
-                            </div>
-                        </div>
-                        <br/>
-                        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                            <div class="row">
-                                <ul class="list-inline banner-social-buttons center" style=" align-content: center;
-                                justify-content:center; display: flex; width: 100%;margin: 0;padding: 0; margin-top: 60%">
-                                    {% include social.html %}
-                                </ul>
-                            </div>
+                        <div style="line-height: 50px;margin-top: 3em;">
+                            <a class="btn btn-md request-a-demo rad" style="color: white;cursor: pointer;">REQUEST A DEMO</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.container -->
+        {% include chart.html %}
     </div>
     <!-- /.intro-header -->
 </section>
