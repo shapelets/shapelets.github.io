@@ -75,45 +75,77 @@
 </script>
 
 <script>
+    $('.btn.rad').click(() => {
+        $('#contact input').removeClass('border-error');
+        $('#contact input[name="firstName"]').show();
+        $('#contact input[name="lastName"]').show();
+        $('#contact input[name="companyName"]').show();
+        $('#contact input[name="companyEmail"]').show();
+        $('#contact textarea[name="description"]').show();
+        $('#contact input[name="phone"]').show();
+        $('#contact button[type="submit"]').html('SUBMIT');
+        $('#contact button[type="submit"]').show();
+        $('#contact .contact-message').html('');
+        $('#contact .contact-message').hide();
+        $('#contact .modal-header').show();
+        $('#contact .modal-body').css('padding-top','0');
+        $('#contact .modal-body').css('text-align','left');
+        $('#contact #modalContact').modal();
+    });
+
+    $('#modalContact').on('hidden.bs.modal', () => {
+        //on hide modal build again the form
+        $('#contactForm').removeClass('collapsed');
+    });
+
     let canSubmit = true;
     $('#contactForm').submit(event => {
         event.preventDefault();
-
+        $('#contact .contact-message').hide();
+        $('#contact input').removeClass('border-error');
         let form = {
-            firstName : $('input[name="firstName"]').val(),
-            lastName : $('input[name="lastName"]').val(),
-            companyName : $('input[name="companyName"]').val(),
-            companyEmail : $('input[name="companyEmail"]').val(),
-            description : $('textarea[name="description"]').val() || 'no-description',
-            phone : $('input[name="phone"]').val() || 'no-phone'
+            firstName : $('#contact input[name="firstName"]').val(),
+            lastName : $('#contact input[name="lastName"]').val(),
+            companyName : $('#contact input[name="companyName"]').val(),
+            companyEmail : $('#contact input[name="companyEmail"]').val(),
+            description : $('#contact textarea[name="description"]').val() || 'no-description',
+            phone : $('#contact input[name="phone"]').val() || 'no-phone'
         };
+
         if(canSubmit){
             canSubmit = false;
-            $('button[type="submit"]').html(`<div class="spinner-border" role="status">
-                                                    <span class="sr-only">Loading...</span>
-                                                    </div>`);
+            $('#contact button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
             $.post('https://server-shapelets-io-3001.herokuapp.com/api/contact', form, (data) => {
                 canSubmit = true;
-                $('input[name="firstName"]').val('');
-                $('input[name="lastName"]').val('');
-                $('input[name="companyName"]').val('');
-                $('input[name="companyEmail"]').val('');
-                $('textarea[name="description"]').val('');
-                $('input[name="phone"]').val('');
-                $('button[type="submit"]').html('SUBMIT');
-                $('.contact-message').html('Thanks for your request. We will ritch you shortly.');
-                $('.contact-message').show();
+                $('#contact input[name="firstName"]').val('');
+                $('#contact input[name="lastName"]').val('');
+                $('#contact input[name="companyName"]').val('');
+                $('#contact input[name="companyEmail"]').val('');
+                $('#contact textarea[name="description"]').val('');
+                $('#contact input[name="phone"]').val('');
+                $('#contact button[type="submit"]').html('SUBMIT');
+                $('#contact .contact-message').html('Thanks for your request!<br>We will reach you shortly.');
+                $('#contact .contact-message').show();
+                $('#contact .modal-header').hide();
+                $('#contact .modal-body').css('padding-top','10px');
+                $('#contact .modal-body').css('text-align','center');
+                $('#contactForm').addClass('collapsed');
             }).fail(error => {
+                let errors = error && error.responseJSON && error.responseJSON.errors;
+                $('#contact input[name="firstName"]').val('');
+                $('#contact input[name="lastName"]').val('');
+                $('#contact input[name="companyName"]').val('');
+                $('#contact input[name="companyEmail"]').val('');
+                $('#contact textarea[name="description"]').val('');
+                $('#contact input[name="phone"]').val('');
+                $('#contact button[type="submit"]').html('SUBMIT');
+                if(errors.length > 0){
+                    $(`#contact input[name="${errors[0].param}"]`).addClass('border-error');
+                    $('#contact .contact-message').html(`${errors[0].msg} for input ${$(`#contact input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                    $('#contact .contact-message').show();
+                }
                 canSubmit = true;
-                $('input[name="firstName"]').val('');
-                $('input[name="lastName"]').val('');
-                $('input[name="companyName"]').val('');
-                $('input[name="companyEmail"]').val('');
-                $('textarea[name="description"]').val('');
-                $('input[name="phone"]').val('');
-                $('button[type="submit"]').html('SUBMIT');
-                $('.contact-message').html('It seems to be something wrong. Try again!');
-                $('.contact-message').show();
+
             });
         }
     });
@@ -152,3 +184,79 @@
         }
     });
 </script>
+
+<script>
+        $('.btn.jtt').click(() => {
+            $('#team input').removeClass('border-error');
+            $('#team input[name="firstName"]').show();
+            $('#team input[name="lastName"]').show();
+            $('#team input[name="email"]').show();
+            $('#team input[name="country"]').show();
+            $('#team textarea[name="description"]').show();
+            $('#team input[name="linkedin"]').show();
+            $('#team button[type="submit"]').html('SUBMIT');
+            $('#team button[type="submit"]').show();
+            $('#team .team-message').html('');
+            $('#team .team-message').hide();
+            $('#team .modal-header').show();
+            $('#team .modal-body').css('padding-top','0');
+            $('#team .modal-body').css('text-align','left');
+            $('#team #modalTeam').modal();
+        });
+    
+        $('#modalTeam').on('hidden.bs.modal', () => {
+            //on hide modal build again the form
+            $('#teamForm').removeClass('collapsed');
+        });
+    
+        let canSubmitTeam = true;
+        $('#teamForm').submit(event => {
+            event.preventDefault();
+            $('#team .team-message').hide();
+            $('#team input').removeClass('border-error');
+            let formTeam = {
+                firstName : $('#team input[name="firstName"]').val(),
+                lastName : $('#team input[name="lastName"]').val(),
+                email : $('#team input[name="email"]').val(),
+                country : $('#team input[name="country"]').val(),
+                description : $('#team textarea[name="description"]').val() || 'no-description',
+                linkedin : $('#team input[name="linkedin"]').val()
+            };
+    
+            if(canSubmitTeam){
+                canSubmitTeam = false;
+                $('#team button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
+                $.post('https://server-shapelets-io-3001.herokuapp.com/api/jointeam', formTeam, (data) => {
+                    canSubmitTeam = true;
+                    $('#team input[name="firstName"]').val('');
+                    $('#team input[name="lastName"]').val('');
+                    $('#team input[name="email"]').val('');
+                    $('#team input[name="country"]').val('');
+                    $('#team textarea[name="description"]').val('');
+                    $('#team input[name="linkedin"]').val('');
+                    $('#team button[type="submit"]').html('SUBMIT');
+                    $('#team .team-message').html('Thanks for your request!<br>We will reach you shortly.');
+                    $('#team .team-message').show();
+                    $('#team .modal-header').hide();
+                    $('#team .modal-body').css('padding-top','10px');
+                    $('#team .modal-body').css('text-align','center');
+                    $('#teamForm').addClass('collapsed');
+                }).fail(error => {
+                    let errors = error && error.responseJSON && error.responseJSON.errors;
+                    $('#team input[name="firstName"]').val('');
+                    $('#team input[name="lastName"]').val('');
+                    $('#team input[name="email"]').val('');
+                    $('#team input[name="country"]').val('');
+                    $('#team textarea[name="description"]').val('');
+                    $('#team input[name="linkedin"]').val('');
+                    $('#team button[type="submit"]').html('SUBMIT');
+                    if(errors.length > 0){
+                        $(`#team input[name="${errors[0].param}"]`).addClass('border-error');
+                        $('#team .team-message').html(`${errors[0].msg} for input ${$(`#team input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                        $('#team .team-message').show();
+                    }
+                    canSubmitTeam = true;
+                });
+            }
+        });
+    </script>

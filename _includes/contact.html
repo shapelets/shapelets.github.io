@@ -6,15 +6,18 @@
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">Schedule a Demo</h5>
     </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;top: 20px;right: 20px;color: white;font-size: 40px;">
+        <span aria-hidden="true">&times;</span>
+    </button>
     <div class="modal-body">
+        <div class="contact-message"></div>
         <form id="contactForm">
-            <div class="contact-message"></div>
-            <input type="text" name="firstName" placeholder="First Name *" />
-            <input type="text" name="lastName" placeholder="Last Name *" />
-            <input type="email" name="companyEmail" placeholder="Email address*" />
-            <input type="text" name="companyName" placeholder="Company Name *" />
-            <input type="phone" name="phone" placeholder="Phone (optional)" />
-            <textarea name="description" rows="6" style="width: 100%;" placeholder="Tell us about your project and how we can help you"></textarea>
+            <input type="text" name="firstName" placeholder="First Name *" data-name="First Name" required/>
+            <input type="text" name="lastName" placeholder="Last Name *" data-name="Last Name" required/>
+            <input type="email" name="companyEmail" placeholder="Email address *" data-name="Email address" required/>
+            <input type="text" name="companyName" placeholder="Company Name *" data-name="Company Name" required/>
+            <input type="phone" name="phone" placeholder="Phone (optional)" data-name="Phone" />
+            <textarea name="description" rows="6" style="width: 100%;" placeholder="Tell us about your project and how we can help you" data-name="Description"></textarea>
             <button class="btn" type="submit">SUBMIT</button>
         </form>
     </div>

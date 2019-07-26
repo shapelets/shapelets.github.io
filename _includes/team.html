@@ -161,11 +161,39 @@
         </div>
     </div>
     <div class="line"></div>
-    <div class="hiring text-center">
-        <h1 class="title c-purple">WE ARE HIRING</h1>
-        <h4>We are always looking for talented people, so don't be shy!</h4>
-        <br>
-        <br>
-        <button type="button" class="btn bg-purple" style="color:white; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">JOIN THE TEAM</button>
+    <div class="hiring text-center" style="z-index: 10">
+        <div>
+            <h1 class="title c-purple">WE ARE HIRING</h1>
+            <h4>We are always looking for talented people, so don't be shy!</h4>
+            <br>
+            <br>
+        </div>
+        <button type="button" class="btn bg-purple jtt" style="z-index: 1000;color:white; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">JOIN THE TEAM</button>
+        <div class="back"></div>
+    </div>
+    <!-- team modal -->
+    <div class="modal fade" id="modalTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Join our team</h5>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;top: 20px;right: 20px;color: white;font-size: 40px;">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+            <div class="team-message"></div>
+            <form id="teamForm">
+                <input type="text" name="firstName" placeholder="First Name *" data-name="First Name" required/>
+                <input type="text" name="lastName" placeholder="Last Name *" data-name="Last Name" required/>
+                <input type="email" name="email" placeholder="Email address *" data-name="Email address" required/>
+                <input type="text" name="country" placeholder="Country *" data-name="Country" required/>
+                <input type="text" name="linkedin" placeholder="Linkedin *" data-name="Linkedin" required/>
+                <textarea name="description" rows="6" style="width: 100%;" placeholder="Tell us why you want to join our team!" data-name="Description"></textarea>
+                <button class="btn" type="submit">SUBMIT</button>
+            </form>
+        </div>
+        </div>
+    </div>
     </div>
 </section>
