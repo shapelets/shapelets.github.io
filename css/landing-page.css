@@ -624,10 +624,10 @@ section#features .features .card-text{
 
 section#solutions{
     padding: 64px 0;
+    padding-top: 0;
 }
 
 section#solutions h1.title{
-    margin-top: 40px;
     font-size: 32px;
     font-weight: bold;
 }
