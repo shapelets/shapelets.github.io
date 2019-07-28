@@ -990,3 +990,13 @@ section#footer .social li:hover{
     z-index: 10;
     margin-top: -100px;
 }
+
+.navbar-logo {
+    height: 80px;
+}
+
+@media screen and (max-width : 756px) {
+    .navbar-logo {
+        height: 50px;
+    }
+}
