@@ -781,7 +781,7 @@ section#footer .social ul.ul-social {
         top: 50%;
         right: 50%;
         transform: translate(50%,-50%);
-        text-align: center;
+        width: 100%;
     }
 }
 
@@ -998,5 +998,21 @@ section#footer .social li:hover{
 @media screen and (max-width : 756px) {
     .navbar-logo {
         height: 50px;
+    }
+}
+
+@media screen and (max-width : 756px) {
+    .team-member {
+        font-size: 16px;
+    }
+}
+
+#footer {
+    padding: 40px;
+}
+
+@media screen and (max-width : 756px) {
+    #footer {
+        padding: 0;
     }
 }
