@@ -247,12 +247,13 @@
         </button>
         <div class="modal-body">
             <div class="team-message"></div>
-            <form id="teamForm">
+            <form id="teamForm" enctype="multipart/form-data" method="post">
                 <input type="text" name="firstName" placeholder="First Name *" data-name="First Name" required/>
                 <input type="text" name="lastName" placeholder="Last Name *" data-name="Last Name" required/>
                 <input type="email" name="email" placeholder="Email address *" data-name="Email address" required/>
                 <input type="text" name="country" placeholder="Country *" data-name="Country" required/>
                 <input type="text" name="linkedin" placeholder="Linkedin *" data-name="Linkedin" required/>
+                <input type="file" name="file" placeholder="File *" data-name="File" accept="application/pdf,application/msword,text/plain" required/>
                 <textarea name="description" rows="6" style="width: 100%;" placeholder="Tell us why you want to join our team!" data-name="Description"></textarea>
                 <button class="btn" type="submit">SUBMIT</button>
             </form>
