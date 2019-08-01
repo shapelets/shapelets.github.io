@@ -1015,3 +1015,14 @@ section#footer .social li:hover{
         padding: 0;
     }
 }
+
+#label-file {
+    cursor: pointer;
+    display: block;
+}
+ 
+#file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}

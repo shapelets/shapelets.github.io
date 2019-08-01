@@ -208,6 +208,16 @@
             //on hide modal build again the form
             $('#teamForm').removeClass('collapsed');
         });
+
+        $("#file").change(() => {
+            let fileSize = $('#team input[name="file"]')[0].files[0].size;
+            if(fileSize > 3 * 1024 * 1024){
+                $('#team #label-file .hint').html('attach (max size 3mb)');
+                $('#team input[name="file"]').val('');
+            }else{
+                $('#team #label-file .hint').html($('#team input[name="file"]')[0].files[0].name);
+            }
+        });
     
         let canSubmitTeam = true;
         
@@ -252,6 +262,7 @@
                         $('#team input[name="linkedin"]').val('');
 
                         $('#team input[name="file"]').val('');
+                        $('#team #label-file .hint').html('attach (max size 3mb)');
                         $('#team button[type="submit"]').html('SUBMIT');
                         $('#team .team-message').html('Thanks for your request!<br>We will reach you shortly.');
                         $('#team .team-message').show();
@@ -277,6 +288,7 @@
                         $('#team textarea[name="description"]').val('');
                         $('#team input[name="linkedin"]').val('');
                         $('#team input[name="file"]').val('');
+                        $('#team #label-file .hint').html('attach (max size 3mb)');
                         $('#team button[type="submit"]').html('SUBMIT');
                         if(errors.length > 0){
                             $(`#team input[name="${errors[0].param}"]`).addClass('border-error');
