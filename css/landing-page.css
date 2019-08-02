@@ -1015,3 +1015,16 @@ section#footer .social li:hover{
         padding: 0;
     }
 }
+
+#label-file {
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    color : #1D9ADD;
+}
+ 
+#file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}

@@ -208,55 +208,101 @@
             //on hide modal build again the form
             $('#teamForm').removeClass('collapsed');
         });
+
+        $("#file").change(() => {
+            let fileSize = $('#team input[name="file"]')[0].files[0].size;
+            if(fileSize > 3 * 1024 * 1024){
+                $('#team #label-file .hint').html('attach (max size 3mb)');
+                $('#team input[name="file"]').val('');
+            }else{
+                $('#team #label-file .hint').html($('#team input[name="file"]')[0].files[0].name);
+            }
+        });
     
         let canSubmitTeam = true;
+        
         $('#teamForm').submit(event => {
             event.preventDefault();
             $('#team .team-message').hide();
             $('#team input').removeClass('border-error');
-            let formTeam = {
-                firstName : $('#team input[name="firstName"]').val(),
-                lastName : $('#team input[name="lastName"]').val(),
-                email : $('#team input[name="email"]').val(),
-                country : $('#team input[name="country"]').val(),
-                description : $('#team textarea[name="description"]').val() || 'no-description',
-                linkedin : $('#team input[name="linkedin"]').val()
-            };
+            let formData = new FormData();
+            formData.append('firstName', $('#team input[name="firstName"]').val());
+            formData.append('lastName', $('#team input[name="lastName"]').val());
+            formData.append('email', $('#team input[name="email"]').val());
+            formData.append('country', $('#team input[name="country"]').val());
+            formData.append('description', $('#team textarea[name="description"]').val());
+            formData.append('linkedin', $('#team input[name="linkedin"]').val());
+            formData.append('file', $('#team input[name="file"]')[0].files[0]);
     
             if(canSubmitTeam){
                 canSubmitTeam = false;
                 $('#team button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
-                $.post('https://server-shapelets-io-3001.herokuapp.com/api/jointeam', formTeam, (data) => {
-                    canSubmitTeam = true;
-                    $('#team input[name="firstName"]').val('');
-                    $('#team input[name="lastName"]').val('');
-                    $('#team input[name="email"]').val('');
-                    $('#team input[name="country"]').val('');
-                    $('#team textarea[name="description"]').val('');
-                    $('#team input[name="linkedin"]').val('');
-                    $('#team button[type="submit"]').html('SUBMIT');
-                    $('#team .team-message').html('Thanks for your request!<br>We will reach you shortly.');
-                    $('#team .team-message').show();
-                    $('#team .modal-header').hide();
-                    $('#team .modal-body').css('padding-top','10px');
-                    $('#team .modal-body').css('text-align','center');
-                    $('#teamForm').addClass('collapsed');
-                }).fail(error => {
-                    let errors = error && error.responseJSON && error.responseJSON.errors;
-                    $('#team input[name="firstName"]').val('');
-                    $('#team input[name="lastName"]').val('');
-                    $('#team input[name="email"]').val('');
-                    $('#team input[name="country"]').val('');
-                    $('#team textarea[name="description"]').val('');
-                    $('#team input[name="linkedin"]').val('');
-                    $('#team button[type="submit"]').html('SUBMIT');
-                    if(errors.length > 0){
-                        $(`#team input[name="${errors[0].param}"]`).addClass('border-error');
-                        $('#team .team-message').html(`${errors[0].msg} for input ${$(`#team input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                $.ajax({
+                    url: 'https://server-shapelets-io-3001.herokuapp.com/api/jointeam',
+                    data: formData,
+                    type: 'POST',
+                    processData: false,  // Important!
+                    contentType: false,
+                    cache: false,
+                    success: data => {
+                        canSubmitTeam = true;
+                        formData.delete('firstName');
+                        formData.delete('lastName');
+                        formData.delete('email');
+                        formData.delete('country');
+                        formData.delete('description');
+                        formData.delete('linkedin');
+                        formData.delete('file');
+
+                        $('#team input[name="firstName"]').val('');
+                        $('#team input[name="lastName"]').val('');
+                        $('#team input[name="email"]').val('');
+                        $('#team input[name="country"]').val('');
+                        $('#team textarea[name="description"]').val('');
+                        $('#team input[name="linkedin"]').val('');
+
+                        $('#team input[name="file"]').val('');
+                        $('#team #label-file .hint').html('attach (max size 3mb)');
+                        $('#team button[type="submit"]').html('SUBMIT');
+                        $('#team .team-message').html('Thanks for your request!<br>We will reach you shortly.');
                         $('#team .team-message').show();
+                        $('#team .modal-header').hide();
+                        $('#team .modal-body').css('padding-top','10px');
+                        $('#team .modal-body').css('text-align','center');
+                        $('#teamForm').addClass('collapsed');
+                    },
+                    error : error => {
+                        let errors = error && error.responseJSON && error.responseJSON.errors;
+                        formData.delete('firstName');
+                        formData.delete('lastName');
+                        formData.delete('email');
+                        formData.delete('country');
+                        formData.delete('description');
+                        formData.delete('linkedin');
+                        formData.delete('file');
+
+                        $('#team input[name="firstName"]').val('');
+                        $('#team input[name="lastName"]').val('');
+                        $('#team input[name="email"]').val('');
+                        $('#team input[name="country"]').val('');
+                        $('#team textarea[name="description"]').val('');
+                        $('#team input[name="linkedin"]').val('');
+                        $('#team input[name="file"]').val('');
+                        $('#team #label-file .hint').html('attach (max size 3mb)');
+                        $('#team button[type="submit"]').html('SUBMIT');
+                        if(errors.length > 0){
+                            $(`#team [name="${errors[0].param}"]`).addClass('border-error');
+                            $('#team .team-message').html(`${errors[0].msg} for input ${$(`#team [name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                            $('#team .team-message').show();
+                        }
+                        canSubmitTeam = true;
                     }
-                    canSubmitTeam = true;
                 });
             }
         });
     </script>
+<script>
+    $('.navbar li').on('click',() => {
+        $('.navbar-toggler').click(); //toggle on click navbar item
+    });
+</script>
