@@ -1019,6 +1019,8 @@ section#footer .social li:hover{
 #label-file {
     cursor: pointer;
     display: block;
+    margin-top: 10px;
+    color : #1D9ADD;
 }
  
 #file {

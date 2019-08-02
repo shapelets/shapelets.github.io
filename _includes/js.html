@@ -230,7 +230,7 @@
             formData.append('lastName', $('#team input[name="lastName"]').val());
             formData.append('email', $('#team input[name="email"]').val());
             formData.append('country', $('#team input[name="country"]').val());
-            formData.append('description', $('#team input[name="description"]').val());
+            formData.append('description', $('#team textarea[name="description"]').val());
             formData.append('linkedin', $('#team input[name="linkedin"]').val());
             formData.append('file', $('#team input[name="file"]')[0].files[0]);
     
@@ -238,7 +238,7 @@
                 canSubmitTeam = false;
                 $('#team button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
                 $.ajax({
-                    url: 'http://localhost:5000/api/jointeam',
+                    url: 'https://server-shapelets-io-3001.herokuapp.com/api/jointeam',
                     data: formData,
                     type: 'POST',
                     processData: false,  // Important!
@@ -291,8 +291,8 @@
                         $('#team #label-file .hint').html('attach (max size 3mb)');
                         $('#team button[type="submit"]').html('SUBMIT');
                         if(errors.length > 0){
-                            $(`#team input[name="${errors[0].param}"]`).addClass('border-error');
-                            $('#team .team-message').html(`${errors[0].msg} for input ${$(`#team input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                            $(`#team [name="${errors[0].param}"]`).addClass('border-error');
+                            $('#team .team-message').html(`${errors[0].msg} for input ${$(`#team [name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
                             $('#team .team-message').show();
                         }
                         canSubmitTeam = true;
@@ -301,3 +301,8 @@
             }
         });
     </script>
+<script>
+    $('.navbar li').on('click',() => {
+        $('.navbar-toggler').click(); //toggle on click navbar item
+    });
+</script>
