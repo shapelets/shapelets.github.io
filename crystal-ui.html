@@ -6,14 +6,12 @@ subTitle: The first state-of-the-art platform for time series analysis
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<body id="page-home" class="page">
+	<link rel="stylesheet" href="/css/crystal-ui.css">
+	<body id="page-crystal-ui" class="page">
 		{% include navbar.html %}
 		<main class="main-content">
-			{% include header.html %}
-			{% include features.html %}
-			{% include solutions.html %}
-			{% include who.html %}
-			{% include team.html %}
+			{% include_relative _pages/product/crystal-ui/header.html%}
+			{% include_relative _pages/product/crystal-ui/crystal-ui.html%}
 			{% include footer.html %}
 		</main>
 		{% include js.html %}

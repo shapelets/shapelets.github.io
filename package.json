@@ -1,0 +1,25 @@
+{
+  "name": "shapelets.github.io",
+  "version": "1.0.0",
+  "description": "Landing page of [shapelets.io](https://shapelets.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "watch" : "less-watch-compiler less assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shapelets/shapelets.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shapelets/shapelets.github.io/issues"
+  },
+  "homepage": "https://github.com/shapelets/shapelets.github.io#readme",
+  "dependencies":{},
+  "devDependencies": {
+    "less": "^3.10.3",
+    "less-watch-compiler": "^1.14.1"
+  }
+}

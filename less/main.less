@@ -1,8 +1,35 @@
-/*!
- * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+:root{
+    --color-shapelets : #20145f;
+}
+
+.page {
+    font-family: 'Open Sans', sans-serif;
+    
+    .main-content {
+        position: relative;
+        top: 96px;
+
+        @media (max-width: 756px) {
+            top: 66px;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.parent {
+    position: relative;
+
+    .center-in-parent {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
 
 .text-center {
     text-align: center;
@@ -63,6 +90,7 @@
         src: url("./Flaticon.svg#Flaticon") format("svg")
     }
 }
+
 .showcase .showcase-text {
     padding: 3rem;
 }
@@ -152,12 +180,6 @@ ul.banner-nav > li > a:hover {
     height: 535px;
     width: 100%;
     position: relative;
-}
-
-#footer {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
 }
 
 a {
@@ -725,7 +747,7 @@ section#team div.hiring {
 }
 
 section#team div.hiring div.back {
-    background-image: url(/assets/images/isotype.svg);
+    background-image: url("/assets/images/home/isotype.svg");
     background-repeat: no-repeat;
     opacity: 0.1;
     top: 60%;
@@ -743,81 +765,6 @@ section#team div.hiring button {
 
 section#team div.hiring h1.title {
     margin: 20px auto;
-}
-
-/* section footer */
-
-section#footer{
-    position: relative;
-    overflow: auto;
-    background: #1d9add;
-    color: white;
-}
-
-section#footer .row {
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-}
-
-section#footer .row.first {
-    margin: 80px auto;
-    margin-top: 20px;
-}
-
-section#footer .email a {
-    text-decoration: none;
-    color: white;
-}
-
-section#footer .map a {
-    text-decoration: none;
-    color: white;
-}
-
-section#footer .social ul.ul-social {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0,-50%);
-}
-
-@media screen and (max-width : 756px) {
-    section#footer .social ul.ul-social {
-        position: relative;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%,-50%);
-        width: 100%;
-    }
-}
-
-section#footer .social ul{
-    text-align: left;
-    display: inline-block;
-}
-
-section#footer .social li{
-    margin: 30px auto;
-}
-
-section#footer .social li a {
-    color: white;
-}
-
-section#footer .social li i {
-    font-size: 40px;
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
-section#footer .social li {
-    transition: all 0.5s;
-}
-
-section#footer .social li:hover{
-    transform: scale(1.1);
-    transition: all 0.5s;
 }
 
 .request-a-demo {
@@ -1014,16 +961,6 @@ section#footer .social li:hover{
     }
 }
 
-#footer {
-    padding: 40px;
-}
-
-@media screen and (max-width : 756px) {
-    #footer {
-        padding: 0;
-    }
-}
-
 #label-file {
     cursor: pointer;
     display: block;
@@ -1036,3 +973,7 @@ section#footer .social li:hover{
     position: absolute;
     z-index: -1;
 }
+
+@import './footer.less';
+@import './open-platform.less';
+@import './team.less'; 

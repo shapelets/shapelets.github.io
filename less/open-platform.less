@@ -1,0 +1,79 @@
+#page-open-platform {
+    .header {
+        position: relative;
+        height: 500px;
+        background: url('/assets/images/header.png') no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+        div {
+            max-width: 800px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+    .open-platform {
+        
+        section {
+            padding: 40px;
+            text-align: left;
+            color: var(--color-shapelets);
+        }
+
+        h2 {
+            color: var(--color-shapelets);
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            
+            &.dashed {
+                list-style-type: none;
+
+                & > li {
+                    text-indent: -5px;
+
+                    &::before{
+                        content: "-";
+                        text-indent: -5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .khiva {
+        padding: 40px;
+        background: rgb(241, 241, 241);
+
+        i {
+            font-size: 80px;
+        }
+
+        a, a:visited {
+            color: black;
+        }
+    }
+    
+}

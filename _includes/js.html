@@ -4,11 +4,11 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!-- Plugin JavaScript -->
-<script src="{{ "js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+<script src="/assets/js/jquery.easing.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/landing-page.js"></script>
+<script src="/assets/js/landing-page.js"></script>
 
 <script>
     $(document).on('submit', '#news', function(e) {
@@ -25,12 +25,12 @@
 				success : function(data) {
 					$('.col-md-4 form .input-group .input-group-btn #submit i').addClass('fa fa-check');
 					$('.col-md-4 form .input-group .input-group-btn #submit i').removeClass('fa-spinner fa-spin');
-					$('.col-md-4 .success_msg').html("<p><strong>Your Request was successfully sent.</strong> Thank you!</p>");
+					$('.success_msg').html("<p><strong>Your Request was successfully sent.</strong> Thank you!</p>");
 			},
 			error : function(xhr, err) {
 				$('.col-md-4 form .input-group .input-group-btn #submit i').addClass('fa fa-check');
 				$('.col-md-4 form .input-group .input-group-btn #submit i').removeClass('fa fa-spinner fa-spin');
-				$('.col-md-4 .success_msg').html("<p class='alert alert-danger'>Oops!! An error occurred.</p>");
+				$('.success_msg').html("<p class='alert alert-danger'>Oops!! An error occurred.</p>");
 			}
 		});
 		return false;
@@ -302,7 +302,7 @@
         });
     </script>
 <script>
-    $('.navbar li').on('click',() => {
+    $('.toogle-on-click').on('click',() => {
         $('.navbar-toggler').click(); //toggle on click navbar item
     });
 </script>
