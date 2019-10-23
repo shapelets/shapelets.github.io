@@ -48,14 +48,3 @@
   content: "-";
   text-indent: -5px;
 }
-#page-open-platform .khiva {
-  padding: 40px;
-  background: #f1f1f1;
-}
-#page-open-platform .khiva i {
-  font-size: 80px;
-}
-#page-open-platform .khiva a,
-#page-open-platform .khiva a:visited {
-  color: black;
-}

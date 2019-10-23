@@ -1,0 +1,11 @@
+.khiva {
+  padding: 40px;
+  background: #f1f1f1;
+}
+.khiva i {
+  font-size: 80px;
+}
+.khiva a,
+.khiva a:visited {
+  color: black;
+}

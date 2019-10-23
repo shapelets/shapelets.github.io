@@ -1,0 +1,72 @@
+#page-cristal-ui {
+    .header {
+        position: relative;
+        height: 500px;
+        background: url('/assets/images/header.png') no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+        div {
+            max-width: 800px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+
+    .cristal-ui {
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: var(--color-shapelets);
+
+            p {
+                font-size: 24px;
+                margin: 20px auto;
+            }
+
+            &.section-1 {
+                text-align: center;
+    
+                p {
+                    max-width: 1100px;
+                }
+            }
+
+            .video {
+                min-height: 400px;
+            }
+
+            &.section-6 {
+                text-align: center;
+
+                .request-a-demo {
+                    border-radius: 1em;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    background: var(--color-shapelets);
+                    color: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

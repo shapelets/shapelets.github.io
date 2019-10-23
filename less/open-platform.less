@@ -25,6 +25,13 @@
 
         p {
             font-size: 25px;
+            padding: 20px;
+        }
+
+        @media (max-width : 756px) {
+            p {
+                font-size: 18px;
+            }
         }
     }
 
@@ -34,6 +41,10 @@
             padding: 40px;
             text-align: left;
             color: var(--color-shapelets);
+
+            @media (max-width : 756px) {
+                padding: 20px;
+            }
         }
 
         h2 {
@@ -61,19 +72,5 @@
                 }
             }
         }
-    }
-
-    .khiva {
-        padding: 40px;
-        background: rgb(241, 241, 241);
-
-        i {
-            font-size: 80px;
-        }
-
-        a, a:visited {
-            color: black;
-        }
-    }
-    
+    }    
 }

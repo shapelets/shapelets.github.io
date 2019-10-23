@@ -17,6 +17,15 @@
   max-width: 1200px;
   margin: auto;
 }
+.page .row {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 756px) {
+  .page .text-center-mobile {
+    text-align: center;
+  }
+}
 .parent {
   position: relative;
 }
@@ -823,6 +832,11 @@ section#footer {
   #footer .copyright {
     text-align: center !important;
   }
+  #footer p,
+  #footer .social p,
+  #footer .copyright p {
+    font-size: 12px;
+  }
 }
 #footer .copy {
   margin-top: 10px !important;
@@ -915,11 +929,22 @@ section#footer .copy {
 }
 #page-open-platform .header p {
   font-size: 25px;
+  padding: 20px;
+}
+@media (max-width: 756px) {
+  #page-open-platform .header p {
+    font-size: 18px;
+  }
 }
 #page-open-platform .open-platform section {
   padding: 40px;
   text-align: left;
   color: var(--color-shapelets);
+}
+@media (max-width: 756px) {
+  #page-open-platform .open-platform section {
+    padding: 20px;
+  }
 }
 #page-open-platform .open-platform h2 {
   color: var(--color-shapelets);
@@ -941,21 +966,204 @@ section#footer .copy {
   content: "-";
   text-indent: -5px;
 }
-#page-open-platform .khiva {
-  padding: 40px;
-  background: #f1f1f1;
+#page-analytics p {
+  font-size: 24px;
+  margin: 20px auto;
 }
-#page-open-platform .khiva i {
-  font-size: 80px;
+#page-analytics .col-md-6 {
+  margin: 20px auto;
 }
-#page-open-platform .khiva a,
-#page-open-platform .khiva a:visited {
-  color: black;
+#page-analytics .intro-header {
+  max-width: 100%;
+}
+#page-analytics .intro-message {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  color: white;
+  z-index: 1000;
+  background: url('/assets/images/product/analytics/header.png') no-repeat;
+  background-size: cover;
+}
+#page-analytics .intro-message .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: white;
+  color: var(--color-shapelets);
+  font-weight: 600;
+  cursor: pointer;
+}
+#page-analytics .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--color-shapelets);
+}
+#page-analytics .section img {
+  width: 80%;
+  height: auto;
+}
+#page-cristal-ui .header {
+  position: relative;
+  height: 500px;
+  background: url('/assets/images/header.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#page-cristal-ui .header div {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#page-cristal-ui .header h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+#page-cristal-ui .header p {
+  font-size: 25px;
+}
+#page-cristal-ui .cristal-ui .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-cristal-ui .cristal-ui .section p {
+  font-size: 24px;
+  margin: 20px auto;
+}
+#page-cristal-ui .cristal-ui .section.section-1 {
+  text-align: center;
+}
+#page-cristal-ui .cristal-ui .section.section-1 p {
+  max-width: 1100px;
+}
+#page-cristal-ui .cristal-ui .section .video {
+  min-height: 400px;
+}
+#page-cristal-ui .cristal-ui .section.section-6 {
+  text-align: center;
+}
+#page-cristal-ui .cristal-ui .section.section-6 .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-shapelets);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+#page-flow .header {
+  position: relative;
+  height: 500px;
+  background: url('/assets/images/header.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#page-flow .header div {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#page-flow .header h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+#page-flow .header p {
+  font-size: 25px;
+}
+#page-flow .flow .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-flow .flow .section p {
+  font-size: 24px;
+  margin: 20px auto;
+}
+#page-flow .flow .section.section-1 {
+  text-align: center;
+}
+#page-flow .flow .section.section-1 p {
+  max-width: 1100px;
+}
+#page-flow .flow .section.section-1 img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+#page-flow .flow .section.section-6 {
+  text-align: center;
+}
+#page-flow .flow .section.section-6 .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-shapelets);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a.get-started-button.about {
+  background-color: #EF7C15;
+  color: #FFF;
+}
+.hero__upper {
+  background-image: linear-gradient(180deg, #431B5A, #5B3B6F);
+}
+.hero__upper-text p {
+  margin-bottom: 1em;
+  width: 50.666%;
+  color: #fff;
+  font-weight: 300;
+  font-size: 2.25em;
+  line-height: normal;
+}
+.hero__lower-text {
+  margin: 0 auto 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__lower-text p {
+  width: 30em;
+  color: #333;
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 1.5em 0 0;
 }
 .profiles {
   margin: 0 12.5%;
 }
-.team {
+.team,
+.board,
+.investors {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -981,6 +1189,19 @@ section#footer .copy {
   width: 14em;
   height: 14em;
   margin-bottom: 1em;
+}
+.board__portrait {
+  border-radius: 25em;
+  width: 10em;
+  height: 10em;
+  margin-bottom: 1em;
+}
+.bio-card.immobile .profiles__portrait:hover + .team-bio,
+.bio-card.immobile .board__portrait:hover + .team-bio,
+.bio-card.immobile .board__portrait:hover + .team-bio-board {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.1s ease;
 }
 .team-bio,
 .team-bio-board {
@@ -1053,4 +1274,277 @@ section#footer .copy {
   font-size: 4em;
   color: #F9EFD0;
   cursor: pointer;
+}
+.team-member.col3 .team-bio {
+  left: unset;
+  right: 80%;
+}
+.team-member.col4 .team-bio {
+  left: unset;
+  right: 80%;
+}
+.team-member h4 {
+  color: #555;
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-bottom: 0.1em;
+}
+.investors {
+  margin-bottom: 2em;
+}
+.investors .team-member {
+  align-self: center;
+}
+.investors__logo {
+  width: 16em;
+}
+.investors img.nea {
+  width: 8em;
+  margin: 0 4em;
+}
+.investors img.two-sv {
+  width: 12em;
+  margin: 0 2em;
+}
+.board-profiles__title,
+.investors__title {
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+/*BREAKPOINTS*/
+@media (max-width: 1347px) {
+  .hero__upper-text p {
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1290px) {
+  .hero__upper-text p {
+    font-size: 1.75em;
+    font-weight: 300;
+    width: 16em;
+  }
+  .hero__lower-text {
+    margin-top: 0;
+  }
+  .hero__lower-text p {
+    width: 25em;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1100px) {
+  .profiles {
+    font-size: 15px;
+  }
+  .hero__upper {
+    font-size: 1em;
+  }
+  .hero__upper-text p {
+    margin-bottom: 1em;
+  }
+  .hero__lower-text p {
+    /*margin-top: 1.5em;*/
+    width: 22em;
+    font-size: 1.25em;
+    font-weight: 300;
+  }
+}
+@media (max-width: 1000px) {
+  .profiles {
+    font-size: 13px;
+  }
+  .hero__upper {
+    height: 13.33em;
+  }
+  .hero__upper,
+  .hero__lower {
+    font-size: 0.75em;
+  }
+  .hero__upper-text p {
+    /*font-size: 2em;*/
+    font-weight: 300;
+  }
+  .hero__lower-text p {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  .hero__big-tiger {
+    font-size: 1.333em;
+  }
+  .team,
+  .board,
+  .investors {
+    font-size: 16px;
+    justify-content: space-around;
+  }
+  .board__portrait {
+    border-radius: 25em;
+    width: 14em;
+    height: 14em;
+    margin-bottom: 1em;
+  }
+  .team-member {
+    margin: 0 20px 5em;
+  }
+  .team-member.col3 .team-bio {
+    left: 80%;
+    right: unset;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1em;
+  }
+  .team-member.col2 .team-bio,
+  .team-member.col2 .team-bio-board,
+  .team-member.col4 .team-bio {
+    left: unset;
+    right: 80%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+@media (max-width: 960px) {
+  .hero__big-tiger {
+    display: none;
+  }
+  .hero__upper-text p,
+  .hero__lower-text p {
+    width: 100%;
+  }
+  .hero__lower-text,
+  .hero__upper-text {
+    font-weight: 300;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    margin-bottom: 1em;
+  }
+  .hero__lower {
+    padding-top: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .hero__upper,
+  .hero__lower {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .hero__upper {
+    height: 20em;
+  }
+  .hero__upper-text p {
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  .hero__lower-text p {
+    width: 100%;
+    margin: 0 0 1.5em;
+  }
+  .hero__lower-text,
+  .hero__upper-text {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .bio-card.active.mobile .team-bio .extended-board-profile {
+    font-size: 1.25em;
+  }
+}
+@media (max-width: 715px) {
+  .team,
+  .board,
+  .investors {
+    font-size: 12px;
+  }
+  .hero__upper {
+    height: 18em;
+  }
+  .hero__upper-text p {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-top: 1em;
+  }
+  .hero__lower {
+    padding-top: 0;
+  }
+  .hero__lower-text {
+    margin: 2em auto 0;
+    font-weight: 300;
+  }
+  .hero__upper-text {
+    margin-top: 1em;
+    font-weight: 300;
+  }
+}
+@media (max-width: 600px) {
+  .team-member.col4 .team-bio,
+  .team-member.col3 .team-bio,
+  .team-member.col2 .team-bio,
+  .team-member.col2 .team-bio-board {
+    left: 0;
+    border-radius: 0;
+    right: unset;
+  }
+}
+@media (max-width: 575px) {
+  .hero__upper {
+    height: 22em;
+  }
+  .hero__upper-text {
+    font-weight: 300;
+  }
+  .hero__lower {
+    margin-bottom: 2em;
+  }
+  .hero.about {
+    margin-bottom: 0;
+  }
+  .team,
+  .board,
+  .investors {
+    font-size: 11px;
+  }
+  .profiles__portrait,
+  .board__portrait {
+    width: 12em;
+    height: 12em;
+  }
+  .team-member {
+    margin: 0 10px 3em;
+  }
+  .profiles {
+    margin: 0 5%;
+  }
+}
+@media (max-width: 500px) {
+  .hero__upper {
+    height: 22em;
+  }
+  .hero__upper-text {
+    font-weight: 300;
+  }
+}
+.khiva {
+  padding: 40px;
+  background: #f1f1f1;
+}
+@media (max-width: 756px) {
+  .khiva {
+    padding: 20px;
+  }
+}
+.khiva i {
+  font-size: 80px;
+}
+.khiva a,
+.khiva a:visited {
+  color: black;
+}
+.khiva .row {
+  margin: auto;
 }

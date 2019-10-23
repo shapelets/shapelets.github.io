@@ -1,0 +1,57 @@
+#page-cristal-ui .header {
+  position: relative;
+  height: 500px;
+  background: url('/assets/images/header.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#page-cristal-ui .header div {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#page-cristal-ui .header h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+#page-cristal-ui .header p {
+  font-size: 25px;
+}
+#page-cristal-ui .cristal-ui .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-cristal-ui .cristal-ui .section p {
+  font-size: 24px;
+  margin: 20px auto;
+}
+#page-cristal-ui .cristal-ui .section.section-1 {
+  text-align: center;
+}
+#page-cristal-ui .cristal-ui .section.section-1 p {
+  max-width: 1100px;
+}
+#page-cristal-ui .cristal-ui .section .video {
+  min-height: 400px;
+}
+#page-cristal-ui .cristal-ui .section.section-6 {
+  text-align: center;
+}
+#page-cristal-ui .cristal-ui .section.section-6 .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-shapelets);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
