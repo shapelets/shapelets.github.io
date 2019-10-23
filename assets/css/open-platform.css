@@ -22,11 +22,22 @@
 }
 #page-open-platform .header p {
   font-size: 25px;
+  padding: 20px;
+}
+@media (max-width: 756px) {
+  #page-open-platform .header p {
+    font-size: 18px;
+  }
 }
 #page-open-platform .open-platform section {
   padding: 40px;
   text-align: left;
   color: var(--color-shapelets);
+}
+@media (max-width: 756px) {
+  #page-open-platform .open-platform section {
+    padding: 20px;
+  }
 }
 #page-open-platform .open-platform h2 {
   color: var(--color-shapelets);

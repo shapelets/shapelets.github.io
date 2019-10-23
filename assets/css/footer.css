@@ -12,6 +12,11 @@ section#footer {
   #footer .copyright {
     text-align: center !important;
   }
+  #footer p,
+  #footer .social p,
+  #footer .copyright p {
+    font-size: 12px;
+  }
 }
 #footer .copy {
   margin-top: 10px !important;
