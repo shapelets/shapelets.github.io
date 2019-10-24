@@ -1,0 +1,12 @@
+.cta {
+  text-align: center;
+}
+.cta .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-shapelets);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

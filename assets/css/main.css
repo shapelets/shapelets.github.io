@@ -905,6 +905,22 @@ section#footer .copy {
   width: 90%;
   margin: auto;
 }
+.cta {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+  text-align: center;
+}
+.cta .request-a-demo {
+  border-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--color-shapelets);
+  font-weight: 600;
+  cursor: pointer;
+}
 #page-open-platform .header {
   position: relative;
   height: 500px;
@@ -1050,18 +1066,6 @@ section#footer .copy {
 #page-cristal-ui .cristal-ui .section .video {
   min-height: 400px;
 }
-#page-cristal-ui .cristal-ui .section.section-6 {
-  text-align: center;
-}
-#page-cristal-ui .cristal-ui .section.section-6 .request-a-demo {
-  border-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: var(--color-shapelets);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
 #page-flow .header {
   position: relative;
   height: 500px;
@@ -1109,17 +1113,47 @@ section#footer .copy {
   width: 100%;
   height: auto;
 }
-#page-flow .flow .section.section-6 {
+#page-company .header {
+  position: relative;
+  height: 500px;
+  background: url('/assets/images/header.png') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#page-company .header div {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#page-company .header h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+#page-company .header p {
+  font-size: 25px;
+}
+#page-company .company .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-company .company .section p {
+  font-size: 24px;
+  margin: 20px auto;
+}
+#page-company .company .section.section-1 {
   text-align: center;
 }
-#page-flow .flow .section.section-6 .request-a-demo {
-  border-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: var(--color-shapelets);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+#page-company .company .section.section-1 p {
+  max-width: 1100px;
 }
 ul {
   list-style: none;
