@@ -76,6 +76,49 @@ a.get-started-button.about {
     opacity: 1;
     transition: opacity 0.1s ease; }
 
+.bio-card {
+    .parent {
+        height: 252px;
+        width: 252px;
+        background: var(--color-shapelets);
+        border-radius: 4px;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .center-in-parent {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate(0, -50%);
+        text-align: left;
+        font-size: 40px;
+        color: white;
+    }
+    
+    @media (max-width: 768px) {
+        .parent {
+            height: 224px;
+            width: 224px;
+        }
+
+        .center-in-parent {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .parent {
+            height: 192px;
+            width: 192px;
+        }
+
+        .center-in-parent {
+            font-size: 30px;
+        }
+    }
+}
+
 .team-bio, .team-bio-board {
     position: absolute;
     pointer-events: none;

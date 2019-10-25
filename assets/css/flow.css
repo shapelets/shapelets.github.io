@@ -45,15 +45,3 @@
   width: 100%;
   height: auto;
 }
-#page-flow .flow .section.section-6 {
-  text-align: center;
-}
-#page-flow .flow .section.section-6 .request-a-demo {
-  border-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: var(--color-shapelets);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}

@@ -43,15 +43,3 @@
 #page-cristal-ui .cristal-ui .section .video {
   min-height: 400px;
 }
-#page-cristal-ui .cristal-ui .section.section-6 {
-  text-align: center;
-}
-#page-cristal-ui .cristal-ui .section.section-6 .request-a-demo {
-  border-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: var(--color-shapelets);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
