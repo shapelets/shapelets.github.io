@@ -3,10 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 222.4 173.3" style="enable-background:new 0 0 222.4 173.3;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#25215D;stroke-width:0.75;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#25215D;stroke-miterlimit:10;}
 	.st1{fill:none;}
-	.st2{font-family:'MyriadPro-Regular';}
-	.st3{font-size:26px;}
+	.st2{fill:#25215D;stroke:#25215D;stroke-width:0.25;stroke-miterlimit:10;}
+	.st3{font-family:'MyriadPro-Regular';}
+	.st4{font-size:26px;}
 </style>
 <g>
 	<g>
@@ -36,7 +37,7 @@
 	<g>
 		<polyline class="st0" points="127.9,12.7 127.9,0.4 189.5,0.4 189.5,37.1 127.9,37.1 127.9,12.7 		"/>
 		<rect x="139.3" y="3.6" class="st1" width="38.9" height="28"/>
-		<text transform="matrix(0.9197 0 0 1 139.2584 25.3872)" class="st0 st2 st3">&lt;/&gt;</text>
+		<text transform="matrix(0.9197 0 0 1 139.2588 25.3872)" class="st2 st3 st4">&lt;/&gt;</text>
 	</g>
 	<g>
 		<path class="st0" d="M220.3,75.9l-4.7,12.7l-3.7-6l-5.7,10.2l-4-3.3l-3.7,6.7l-2.3-23.3l-2.7,13.7l-9.2-2.7l-14,9.8l-7.5-6

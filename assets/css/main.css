@@ -606,6 +606,7 @@ section#who .who-text {
 /* section team */
 section#team {
   padding: 64px 0;
+  background: #f8f8f8;
 }
 section#team h1.title {
   margin: 0;
@@ -658,67 +659,67 @@ section#team div.hiring h1.title {
 .request-a-demo:hover {
   color: white;
 }
-#contact .modal-content {
+#contact-us .modal-content {
   background: #1d9add;
   padding-left: 40px;
   padding-right: 40px;
 }
 @media screen and (max-width: 756px) {
-  #contact .modal-content {
+  #contact-us .modal-content {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-#contact .modal-header {
+#contact-us .modal-header {
   border-bottom: 0px;
   display: inline-block;
   text-align: center;
   color: white;
   padding-bottom: 0;
 }
-#contact .modal-body {
+#contact-us .modal-body {
   padding-top: 0;
 }
-#contact .modal-header h5 {
+#contact-us .modal-header h5 {
   font-size: 30px;
 }
-#contact .modal-content input {
+#contact-us .modal-content input {
   width: 100%;
   display: block;
   margin: 20px auto;
   padding: 10px;
 }
-#contact .modal-content textarea {
+#contact-us .modal-content textarea {
   padding: 10px;
 }
-#contact .modal-content button[type="submit"] {
+#contact-us .modal-content button[type="submit"] {
   background: #d65353;
   font-weight: bold;
   color: white;
   width: 100%;
   margin-top: 10px;
 }
-#contact .contact-message {
+#contact-us .contact-message {
   display: none;
   color: white;
 }
-#contact #contactForm.collapsed {
+#contact-us #contactForm.collapsed {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
 }
-#contact #contactForm {
+#contact-us #contactForm {
   max-height: 1500px;
   overflow: auto;
   transition: max-height 0.5s;
 }
-#contact .contact-message {
+#contact-us .contact-message {
   padding: 10px;
 }
-#contact input.border-error {
+#contact-us input.border-error {
   border: 1px solid red;
 }
-#contact input.border-error::placeholder {
+#contact-us input.border-error::placeholder {
   color: red;
 }
 /* Modal join our team */
@@ -1244,10 +1245,8 @@ a.get-started-button.about {
   position: relative;
 }
 .profiles__portrait {
-  border-radius: 4px;
   width: 14em;
   height: 14em;
-  margin-bottom: 1em;
 }
 .board__portrait {
   border-radius: 25em;
@@ -1378,7 +1377,7 @@ a.get-started-button.about {
   right: 80%;
 }
 .team-member h4 {
-  color: #555;
+  color: var(--color-shapelets);
   font-size: 1.125em;
   font-weight: 700;
   margin-bottom: 0.1em;
@@ -1622,6 +1621,153 @@ a.get-started-button.about {
   .hero__upper-text {
     font-weight: 300;
   }
+}
+.team-description {
+  width: 100%;
+  padding: 12px;
+  background: white;
+}
+.team-member {
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+.team-member-bio {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-shapelets);
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: -1;
+  color: white;
+}
+.team-member-bio p {
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}
+.team-member-bio.show {
+  opacity: 1;
+  transition: all 0.5s;
+  z-index: 100;
+}
+.team-member:hover .team-description {
+  color: white;
+  background: var(--color-shapelets);
+  transition: all 0.5s;
+}
+.team-member:hover .team-description h4 {
+  color: white;
+  transition: all 0.5s;
+}
+#page-contact .contact .section,
+#page-contact .company-board .section {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-contact .contact .section p,
+#page-contact .company-board .section p {
+  font-size: 24px;
+  margin: 20px auto;
+}
+#page-contact .contact .section.section-1,
+#page-contact .company-board .section.section-1 {
+  text-align: center;
+}
+#page-contact .contact .section.section-1 p,
+#page-contact .company-board .section.section-1 p {
+  max-width: 1100px;
+}
+#page-contact .contact .section.section-1 h2,
+#page-contact .company-board .section.section-1 h2 {
+  font-weight: bold;
+}
+#page-contact .contact .section .box-form,
+#page-contact .company-board .section .box-form {
+  border: 1px solid var(--color-shapelets);
+  padding: 20px;
+  text-align: left;
+}
+#page-contact .contact .section .box-form input,
+#page-contact .company-board .section .box-form input {
+  border: 1px solid var(--color-shapelets);
+  width: 100%;
+  padding: 8px;
+  color: var(--color-shapelets);
+  margin-bottom: 16px;
+}
+#page-contact .contact .section .box-form input::placeholder,
+#page-contact .company-board .section .box-form input::placeholder {
+  color: var(--color-shapelets);
+}
+#page-contact .contact .section .box-form textarea,
+#page-contact .company-board .section .box-form textarea {
+  border: 1px solid var(--color-shapelets);
+  width: 100%;
+  padding: 8px;
+  color: var(--color-shapelets);
+  margin-bottom: 16px;
+}
+#page-contact .contact .section .box-form textarea::placeholder,
+#page-contact .company-board .section .box-form textarea::placeholder {
+  color: var(--color-shapelets);
+}
+#page-contact .contact .section .box-form button,
+#page-contact .company-board .section .box-form button {
+  background: #1d9add;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 24px 8px 24px;
+}
+#page-contact .contact .section.section-2,
+#page-contact .company-board .section.section-2 {
+  max-width: 1200px;
+  min-height: 600px;
+  background: url('/assets/images/contact/asset_3.svg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 756px) {
+  #page-contact .contact .section.section-2,
+  #page-contact .company-board .section.section-2 {
+    min-height: auto;
+  }
+}
+#page-contact .contact .section.section-2 div.contact-info,
+#page-contact .company-board .section.section-2 div.contact-info {
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px;
+}
+#page-contact .contact .section.section-2 div.contact-info .info,
+#page-contact .company-board .section.section-2 div.contact-info .info {
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  max-width: 400px;
+  padding: 16px;
+}
+@media (max-width: 756px) {
+  #page-contact .contact .section.section-2 div.contact-info .info,
+  #page-contact .company-board .section.section-2 div.contact-info .info {
+    margin: auto;
+  }
+}
+#page-contact .contact .section.section-2 div.contact-info .info ul,
+#page-contact .company-board .section.section-2 div.contact-info .info ul {
+  margin: 0;
+  padding: 0;
+}
+#page-contact .contact .section.section-2 div.contact-info .info ul li,
+#page-contact .company-board .section.section-2 div.contact-info .info ul li {
+  margin-bottom: 12px;
 }
 .khiva {
   padding: 40px;

@@ -17,3 +17,8 @@
 .khiva .row {
   margin: auto;
 }
+.khiva img {
+  width: 60%;
+  height: auto;
+  margin: auto;
+}

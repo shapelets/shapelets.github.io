@@ -43,3 +43,21 @@
 #page-cristal-ui .cristal-ui .section .video {
   min-height: 400px;
 }
+#page-cristal-ui .cristal-ui .section .gif {
+  border-radius: 4px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  #page-cristal-ui .cristal-ui .section .gif {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}

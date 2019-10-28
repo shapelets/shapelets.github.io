@@ -43,7 +43,8 @@
   color: var(--color-shapelets);
 }
 #page-open-platform .open-platform p {
-  margin: 20px 0;
+  margin: 20px auto;
+  font-size: 24px;
 }
 #page-open-platform .open-platform ul {
   margin: 0;

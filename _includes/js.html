@@ -64,33 +64,36 @@
             $(".bio-card").removeClass("mobile").addClass("immobile");
         }
     }
-    $(".team-member").on("click", ".bio-card", function(event) {
-        $(".bio-card").removeClass("active");
-        $(event.currentTarget).addClass("active");
+
+    $(".team-member").click(event => {
+        let element = $(event.currentTarget).children('.team-member-bio');
+        element.hasClass('show') ?
+        element.removeClass('show') :
+        element.addClass('show');
     });
-    $(".bio-card").children(".exit-button").on("click", function(event) {
-        event.stopPropagation();
-        $(event.currentTarget).parent().removeClass("active");
-    });
+    // $(".bio-card").children(".exit-button").on("click", function(event) {
+    //     event.stopPropagation();
+    //     $(event.currentTarget).parent().removeClass("active");
+    // });
 </script>
 
 <script>
     $('.btn.rad').click(() => {
-        $('#contact input').removeClass('border-error');
-        $('#contact input[name="firstName"]').show();
-        $('#contact input[name="lastName"]').show();
-        $('#contact input[name="companyName"]').show();
-        $('#contact input[name="companyEmail"]').show();
-        $('#contact textarea[name="description"]').show();
-        $('#contact input[name="phone"]').show();
-        $('#contact button[type="submit"]').html('SUBMIT');
-        $('#contact button[type="submit"]').show();
-        $('#contact .contact-message').html('');
-        $('#contact .contact-message').hide();
-        $('#contact .modal-header').show();
-        $('#contact .modal-body').css('padding-top','0');
-        $('#contact .modal-body').css('text-align','left');
-        $('#contact #modalContact').modal();
+        $('#contact-us input').removeClass('border-error');
+        $('#contact-us input[name="firstName"]').show();
+        $('#contact-us input[name="lastName"]').show();
+        $('#contact-us input[name="companyName"]').show();
+        $('#contact-us input[name="companyEmail"]').show();
+        $('#contact-us textarea[name="description"]').show();
+        $('#contact-us input[name="phone"]').show();
+        $('#contact-us button[type="submit"]').html('SUBMIT');
+        $('#contact-us button[type="submit"]').show();
+        $('#contact-us .contact-message').html('');
+        $('#contact-us .contact-message').hide();
+        $('#contact-us .modal-header').show();
+        $('#contact-us .modal-body').css('padding-top','0');
+        $('#contact-us .modal-body').css('text-align','left');
+        $('#contact-us #modalContact').modal();
     });
 
     $('#modalContact').on('hidden.bs.modal', () => {
@@ -101,51 +104,103 @@
     let canSubmit = true;
     $('#contactForm').submit(event => {
         event.preventDefault();
-        $('#contact .contact-message').hide();
-        $('#contact input').removeClass('border-error');
+        $('#contact-us .contact-message').hide();
+        $('#contact-us input').removeClass('border-error');
         let form = {
-            firstName : $('#contact input[name="firstName"]').val(),
-            lastName : $('#contact input[name="lastName"]').val(),
-            companyName : $('#contact input[name="companyName"]').val(),
-            companyEmail : $('#contact input[name="companyEmail"]').val(),
-            description : $('#contact textarea[name="description"]').val() || 'no-description',
-            phone : $('#contact input[name="phone"]').val() || 'no-phone'
+            firstName : $('#contact-us input[name="firstName"]').val(),
+            lastName : $('#contact-us input[name="lastName"]').val(),
+            companyName : $('#contact-us input[name="companyName"]').val(),
+            companyEmail : $('#contact-us input[name="companyEmail"]').val(),
+            description : $('#contact-us textarea[name="description"]').val() || 'no-description',
+            phone : $('#contact-us input[name="phone"]').val() || 'no-phone'
         };
 
         if(canSubmit){
             canSubmit = false;
-            $('#contact button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
+            $('#contact-us button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
             $.post('https://server-shapelets-io-3001.herokuapp.com/api/contact', form, (data) => {
                 canSubmit = true;
-                $('#contact input[name="firstName"]').val('');
-                $('#contact input[name="lastName"]').val('');
-                $('#contact input[name="companyName"]').val('');
-                $('#contact input[name="companyEmail"]').val('');
-                $('#contact textarea[name="description"]').val('');
-                $('#contact input[name="phone"]').val('');
-                $('#contact button[type="submit"]').html('SUBMIT');
-                $('#contact .contact-message').html('Thanks for your request!<br>We will reach you shortly.');
-                $('#contact .contact-message').show();
-                $('#contact .modal-header').hide();
-                $('#contact .modal-body').css('padding-top','10px');
-                $('#contact .modal-body').css('text-align','center');
+                $('#contact-us input[name="firstName"]').val('');
+                $('#contact-us input[name="lastName"]').val('');
+                $('#contact-us input[name="companyName"]').val('');
+                $('#contact-us input[name="companyEmail"]').val('');
+                $('#contact-us textarea[name="description"]').val('');
+                $('#contact-us input[name="phone"]').val('');
+                $('#contact-us button[type="submit"]').html('SUBMIT');
+                $('#contact-us .contact-message').html('Thanks for your request!<br>We will reach you shortly.');
+                $('#contact-us .contact-message').show();
+                $('#contact-us .modal-header').hide();
+                $('#contact-us .modal-body').css('padding-top','10px');
+                $('#contact-us .modal-body').css('text-align','center');
                 $('#contactForm').addClass('collapsed');
             }).fail(error => {
                 let errors = error && error.responseJSON && error.responseJSON.errors;
-                $('#contact input[name="firstName"]').val('');
-                $('#contact input[name="lastName"]').val('');
-                $('#contact input[name="companyName"]').val('');
-                $('#contact input[name="companyEmail"]').val('');
-                $('#contact textarea[name="description"]').val('');
-                $('#contact input[name="phone"]').val('');
-                $('#contact button[type="submit"]').html('SUBMIT');
+                $('#contact-us input[name="firstName"]').val('');
+                $('#contact-us input[name="lastName"]').val('');
+                $('#contact-us input[name="companyName"]').val('');
+                $('#contact-us input[name="companyEmail"]').val('');
+                $('#contact-us textarea[name="description"]').val('');
+                $('#contact-us input[name="phone"]').val('');
+                $('#contact-us button[type="submit"]').html('SUBMIT');
                 if(errors.length > 0){
-                    $(`#contact input[name="${errors[0].param}"]`).addClass('border-error');
-                    $('#contact .contact-message').html(`${errors[0].msg} for input ${$(`#contact input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
-                    $('#contact .contact-message').show();
+                    $(`#contact-us input[name="${errors[0].param}"]`).addClass('border-error');
+                    $('#contact-us .contact-message').html(`${errors[0].msg} for input ${$(`#contact-us input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                    $('#contact-us .contact-message').show();
                 }
                 canSubmit = true;
+            });
+        }
+    });
+</script>
 
+<script>
+let canSubmitForm = true;
+    $('#box-contact-form').submit(event => {
+        event.preventDefault();
+        //$('#contact-us .contact-message').hide();
+        //$('#contact-us input').removeClass('border-error');
+        let form = {
+            firstName : $('#box-contact-form input[name="firstName"]').val(),
+            lastName : $('#box-contact-form input[name="lastName"]').val(),
+            companyName : $('#box-contact-form input[name="companyName"]').val(),
+            companyEmail : $('#box-contact-form input[name="companyEmail"]').val(),
+            description : $('#box-contact-form textarea[name="description"]').val() || 'no-description',
+            phone : ''
+        };
+
+        console.log(form);
+
+        if(canSubmitForm){
+            canSubmitForm = false;
+            //$('#contact-us button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
+            $.post('https://server-shapelets-io-3001.herokuapp.com/api/contact', form, (data) => {
+                canSubmitForm = true;
+                $('#box-contact-form input[name="firstName"]').val('');
+                $('#box-contact-form input[name="lastName"]').val('');
+                $('#box-contact-form input[name="companyName"]').val('');
+                $('#box-contact-form input[name="companyEmail"]').val('');
+                $('#box-contact-form textarea[name="description"]').val('');
+                //$('#contact-us button[type="submit"]').html('SUBMIT');
+                // $('#contact-us .contact-message').html('Thanks for your request!<br>We will reach you shortly.');
+                // $('#contact-us .contact-message').show();
+                // $('#contact-us .modal-header').hide();
+                // $('#contact-us .modal-body').css('padding-top','10px');
+                // $('#contact-us .modal-body').css('text-align','center');
+                // $('#contactForm').addClass('collapsed');
+            }).fail(error => {
+                let errors = error && error.responseJSON && error.responseJSON.errors;
+                $('#box-contact-form input[name="firstName"]').val('');
+                $('#box-contact-form input[name="lastName"]').val('');
+                $('#box-contact-form input[name="companyName"]').val('');
+                $('#box-contact-form input[name="companyEmail"]').val('');
+                $('#box-contact-form textarea[name="description"]').val('');
+                console.log(error);
+                // if(errors.length > 0){
+                //     $(`#box-contact-form input[name="${errors[0].param}"]`).addClass('border-error');
+                //     $('#contact-us .contact-message').html(`${errors[0].msg} for input ${$(`#contact-us input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                //     $('#contact-us .contact-message').show();
+                // }
+                canSubmitForm = true;
             });
         }
     });

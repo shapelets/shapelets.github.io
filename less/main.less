@@ -729,6 +729,7 @@ section#who .who-text {
 
 section#team{
     padding: 64px 0;
+    background: #f8f8f8;
 }
 
 section#team h1.title{
@@ -791,20 +792,20 @@ section#team div.hiring h1.title {
     color: white;
 }
 
-#contact .modal-content {
+#contact-us .modal-content {
     background: #1d9add;
     padding-left: 40px;
     padding-right: 40px;
 }
 
 @media screen and (max-width : 756px) {
-    #contact .modal-content {
+    #contact-us .modal-content {
         padding-left: 20px;
         padding-right: 20px;
     }
 }
 
-#contact .modal-header{
+#contact-us .modal-header{
     border-bottom: 0px;
     display: inline-block;
     text-align: center;
@@ -812,26 +813,26 @@ section#team div.hiring h1.title {
     padding-bottom: 0;
 }
 
-#contact .modal-body{
+#contact-us .modal-body{
     padding-top: 0;
 }
 
-#contact .modal-header h5{
+#contact-us .modal-header h5{
     font-size: 30px;
 }
 
-#contact .modal-content input {
+#contact-us .modal-content input {
     width: 100%;
     display: block;
     margin: 20px auto;
     padding: 10px;
 }
 
-#contact .modal-content textarea {
+#contact-us .modal-content textarea {
     padding: 10px;
 }
 
-#contact .modal-content button[type="submit"]{
+#contact-us .modal-content button[type="submit"]{
     background: rgb(214, 83, 83);
     font-weight: bold;
     color: white;
@@ -839,32 +840,32 @@ section#team div.hiring h1.title {
     margin-top: 10px;
 }
 
-#contact .contact-message {
+#contact-us .contact-message {
     display: none;
     color: white;
 }
 
-#contact #contactForm.collapsed {
+#contact-us #contactForm.collapsed {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 
-#contact #contactForm {
+#contact-us #contactForm {
     max-height: 1500px;
     overflow: auto;
     transition: max-height 0.5s;
 }
 
-#contact .contact-message {
+#contact-us .contact-message {
     padding: 10px;
 }
 
-#contact input.border-error {
+#contact-us input.border-error {
     border: 1px solid red;
 }
 
-#contact input.border-error::placeholder {
+#contact-us input.border-error::placeholder {
     color: red;
 }
 
@@ -993,4 +994,5 @@ section#team div.hiring h1.title {
 @import './flow.less';
 @import './company.less';
 @import './team.less'; 
+@import './contact.less';
 @import './khiva.less';

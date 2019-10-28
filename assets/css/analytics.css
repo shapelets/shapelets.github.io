@@ -1,8 +1,8 @@
-#page-analytics p {
+#page-analytics .analytics p {
   font-size: 24px;
   margin: 20px auto;
 }
-#page-analytics .col-md-6 {
+#page-analytics .analytics .col-md-6 {
   margin: 20px auto;
 }
 #page-analytics .intro-header {

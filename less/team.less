@@ -60,10 +60,9 @@ a.get-started-button.about {
     position: relative; }
 
 .profiles__portrait {
-    border-radius: 4px;
     width: 14em;
     height: 14em;
-    margin-bottom: 1em; }
+}
 
 .board__portrait {
     border-radius: 25em;
@@ -195,7 +194,7 @@ a.get-started-button.about {
     right: 80%; }
 
 .team-member h4 {
-    color: #555;
+    color: var(--color-shapelets);
     font-size: 1.125em;
     font-weight: 700;
     margin-bottom: 0.1em; }
@@ -378,4 +377,51 @@ a.get-started-button.about {
     .hero__upper-text {
         font-weight: 300;
     }    
+}
+
+.team-description {
+    width: 100%;
+    padding: 12px;
+    background: white;
+}
+
+.team-member {
+    cursor: pointer;
+    position: relative;
+    background: white;
+}
+
+.team-member-bio {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-shapelets);
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: -1;
+    color: white;
+
+    p {
+        font-size: 14px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    &.show {
+        opacity: 1;
+        transition: all 0.5s;
+        z-index: 100;
+    }
+}
+
+.team-member:hover .team-description {
+    color: white;
+    background: var(--color-shapelets);
+    transition: all 0.5s;
+
+    h4 {
+        color: white;
+        transition: all 0.5s;
+    }
 }
