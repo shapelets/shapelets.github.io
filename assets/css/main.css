@@ -35,6 +35,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.navbar {
+  background: white;
+}
+.navbar ul li a span,
+.navbar ul li a {
+  color: var(--color-shapelets);
+}
 .text-center {
   text-align: center;
 }
@@ -649,9 +656,8 @@ section#team div.hiring h1.title {
   margin: 20px auto;
 }
 .request-a-demo {
-  border-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
+  border-radius: 100px;
+  padding: 10px 20px;
   background: #1d9add;
   color: white;
   font-weight: 600;
@@ -995,6 +1001,7 @@ section#footer .copy {
 }
 #page-analytics .intro-header {
   max-width: 100%;
+  padding: 0;
 }
 #page-analytics .intro-message {
   position: relative;
@@ -1180,6 +1187,146 @@ section#footer .copy {
 #page-company .company .section.section-1 p,
 #page-company .company-board .section.section-1 p {
   max-width: 1100px;
+}
+#page-solutions .navbar {
+  background: transparent;
+}
+#page-solutions .navbar.nav-shadow {
+  background: white;
+}
+#page-solutions .navbar.nav-shadow ul li a span,
+#page-solutions .navbar.nav-shadow ul li a {
+  color: var(--color-shapelets);
+}
+#page-solutions .navbar ul li a span,
+#page-solutions .navbar ul li a {
+  color: white;
+}
+#page-solutions .navbar a.dropdown-item {
+  color: var(--color-shapelets);
+}
+#page-solutions .main-content {
+  top: 0;
+}
+#page-solutions .header {
+  position: relative;
+  height: 400px;
+  background: url('/assets/images/solutions/header.jpg') no-repeat;
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+#page-solutions .header div {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#page-solutions .header h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+@media (max-width: 758px) {
+  #page-solutions .header h1 {
+    font-size: 26px;
+  }
+}
+#page-solutions .header p {
+  font-size: 25px;
+}
+#page-solutions .solutions .section.section-1 div.title,
+#page-solutions .solutions .section.section-3 div.title {
+  margin-left: -40px;
+  background: white;
+}
+#page-solutions .solutions .section.section-2 div.title,
+#page-solutions .solutions .section.section-4 div.title {
+  margin-right: -40px;
+  background: #f0f0f0;
+  text-align: right;
+}
+#page-solutions .solutions .section.section-1,
+#page-solutions .solutions .section.section-2,
+#page-solutions .solutions .section.section-3,
+#page-solutions .solutions .section.section-4 {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--color-shapelets);
+}
+#page-solutions .solutions .section.section-1 .vertical-line-left,
+#page-solutions .solutions .section.section-2 .vertical-line-left,
+#page-solutions .solutions .section.section-3 .vertical-line-left,
+#page-solutions .solutions .section.section-4 .vertical-line-left {
+  border-left: 1px solid var(--color-shapelets);
+  margin-left: 40px;
+}
+#page-solutions .solutions .section.section-1 .vertical-line-right,
+#page-solutions .solutions .section.section-2 .vertical-line-right,
+#page-solutions .solutions .section.section-3 .vertical-line-right,
+#page-solutions .solutions .section.section-4 .vertical-line-right {
+  border-right: 1px solid var(--color-shapelets);
+  margin-right: 40px;
+}
+#page-solutions .solutions .section.section-1 p.content,
+#page-solutions .solutions .section.section-2 p.content,
+#page-solutions .solutions .section.section-3 p.content,
+#page-solutions .solutions .section.section-4 p.content {
+  margin-left: 42px;
+}
+#page-solutions .solutions .section.section-1 p,
+#page-solutions .solutions .section.section-2 p,
+#page-solutions .solutions .section.section-3 p,
+#page-solutions .solutions .section.section-4 p {
+  font-size: 24px;
+}
+#page-solutions .solutions .section.section-1 ul.like-items,
+#page-solutions .solutions .section.section-2 ul.like-items,
+#page-solutions .solutions .section.section-3 ul.like-items,
+#page-solutions .solutions .section.section-4 ul.like-items {
+  font-size: 24px;
+  margin-left: 0;
+  padding: 0;
+}
+#page-solutions .solutions .section.section-1 ul.like-items.dashed,
+#page-solutions .solutions .section.section-2 ul.like-items.dashed,
+#page-solutions .solutions .section.section-3 ul.like-items.dashed,
+#page-solutions .solutions .section.section-4 ul.like-items.dashed {
+  list-style-type: none;
+}
+#page-solutions .solutions .section.section-1 ul.like-items.dashed > li,
+#page-solutions .solutions .section.section-2 ul.like-items.dashed > li,
+#page-solutions .solutions .section.section-3 ul.like-items.dashed > li,
+#page-solutions .solutions .section.section-4 ul.like-items.dashed > li {
+  text-indent: -5px;
+}
+#page-solutions .solutions .section.section-1 ul.like-items.dashed > li::before,
+#page-solutions .solutions .section.section-2 ul.like-items.dashed > li::before,
+#page-solutions .solutions .section.section-3 ul.like-items.dashed > li::before,
+#page-solutions .solutions .section.section-4 ul.like-items.dashed > li::before {
+  content: "-";
+  text-indent: -5px;
+}
+#page-solutions .solutions .section.section-1 ul.like-items li,
+#page-solutions .solutions .section.section-2 ul.like-items li,
+#page-solutions .solutions .section.section-3 ul.like-items li,
+#page-solutions .solutions .section.section-4 ul.like-items li {
+  border-bottom: 1px solid var(--color-shapelets);
+  margin-bottom: 20px;
+}
+#page-solutions .solutions .section.section-5 {
+  padding: 80px 0 80px 0;
+  background: linear-gradient(to right, #21145F 0%, #21145F 70%, #1D9ADD 100%);
+}
+#page-solutions .solutions .section.section-5 h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
 }
 ul {
   list-style: none;

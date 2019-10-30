@@ -230,6 +230,11 @@ let canSubmitForm = true;
     });
 </script>
 <script>
+    if($(window).scrollTop() <= 20){
+        $('nav.navbar').removeClass('nav-shadow');
+    }else{
+        $('nav.navbar').addClass('nav-shadow');
+    }
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         if(scroll <= 20){
