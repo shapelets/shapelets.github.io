@@ -459,6 +459,7 @@ a.get-started-button.about {
   transition: all 0.5s;
   z-index: -1;
   color: white;
+  overflow: auto;
 }
 .team-member-bio p {
   font-size: 14px;

@@ -563,6 +563,7 @@ section#features .features .card-text {
 section#solutions {
   padding: 64px 0;
   padding-top: 0;
+  background: #f1f1f1;
 }
 section#solutions h1.title {
   font-size: 32px;
@@ -587,7 +588,7 @@ section#solutions p span {
 /* section who */
 section#who {
   padding: 64px 0;
-  background: #1D9ADD;
+  background: linear-gradient(to right, #1d9add 0%, #1d9add 1%, var(--color-shapelets) 100%);
   color: white;
 }
 section#who h1.title {
@@ -825,6 +826,63 @@ section#team div.hiring h1.title {
   position: absolute;
   z-index: -1;
 }
+#page-home .navbar {
+  background: transparent;
+}
+#page-home .navbar.nav-shadow {
+  background: white;
+}
+#page-home .navbar.nav-shadow ul li a span,
+#page-home .navbar.nav-shadow ul li a {
+  color: var(--color-shapelets);
+}
+#page-home .navbar ul li a span,
+#page-home .navbar ul li a {
+  color: white;
+}
+#page-home .navbar a.dropdown-item {
+  color: var(--color-shapelets);
+}
+#page-home .main-content {
+  top: 0;
+}
+#page-home #home {
+  background: linear-gradient(to right, #26388f 0%, #26388f 2%, #20145f 12%, #20145f 100%);
+}
+#page-home .intro-header {
+  color: white;
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+#page-home .intro-header .intro-message {
+  color: white;
+}
+#page-home .card-link {
+  color: #1d9add;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  width: 100%;
+}
+#page-home .card-text {
+  margin-bottom: 60px;
+}
+#page-home a.btn-purple {
+  color: var(--color-shapelets);
+  border-color: var(--color-shapelets);
+}
+#page-home a.btn-purple:hover {
+  color: white;
+  background: var(--color-shapelets);
+}
+#page-home #GPU {
+  margin: 60px auto;
+  max-width: 1200px;
+}
+#page-home #GPU img.gpucpu {
+  width: 100%;
+}
 /* section footer */
 section#footer {
   position: relative;
@@ -851,8 +909,8 @@ section#footer {
 }
 #footer .footer-input {
   background: none;
-  border: 1px solid white;
   color: white;
+  border: none;
   padding: 4px;
 }
 #footer .footer-input::placeholder {
@@ -1079,7 +1137,7 @@ section#footer .copy {
 }
 #page-cristal-ui .cristal-ui .section .gif {
   border-radius: 4px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10px rgba(0, 0, 0, 0.22);
   width: 100%;
   height: auto;
   position: absolute;
@@ -1211,9 +1269,7 @@ section#footer .copy {
 #page-solutions .header {
   position: relative;
   height: 400px;
-  background: url('/assets/images/solutions/header.jpg') no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background: linear-gradient(to right, #26388f 0%, #26388f 2%, #20145f 12%, #20145f 100%);
   width: 100%;
   text-align: center;
   color: white;
@@ -1238,90 +1294,50 @@ section#footer .copy {
 #page-solutions .header p {
   font-size: 25px;
 }
-#page-solutions .solutions .section.section-1 div.title,
-#page-solutions .solutions .section.section-3 div.title {
-  margin-left: -40px;
-  background: white;
-}
-#page-solutions .solutions .section.section-2 div.title,
-#page-solutions .solutions .section.section-4 div.title {
-  margin-right: -40px;
-  background: #f0f0f0;
-  text-align: right;
-}
-#page-solutions .solutions .section.section-1,
-#page-solutions .solutions .section.section-2,
-#page-solutions .solutions .section.section-3,
-#page-solutions .solutions .section.section-4 {
+#page-solutions .solutions .section {
   max-width: 1200px;
   margin: auto;
   padding-top: 40px;
   padding-bottom: 40px;
   color: var(--color-shapelets);
 }
-#page-solutions .solutions .section.section-1 .vertical-line-left,
-#page-solutions .solutions .section.section-2 .vertical-line-left,
-#page-solutions .solutions .section.section-3 .vertical-line-left,
-#page-solutions .solutions .section.section-4 .vertical-line-left {
-  border-left: 1px solid var(--color-shapelets);
-  margin-left: 40px;
+#page-solutions .solutions .section h2 {
+  font-weight: bold;
 }
-#page-solutions .solutions .section.section-1 .vertical-line-right,
-#page-solutions .solutions .section.section-2 .vertical-line-right,
-#page-solutions .solutions .section.section-3 .vertical-line-right,
-#page-solutions .solutions .section.section-4 .vertical-line-right {
-  border-right: 1px solid var(--color-shapelets);
-  margin-right: 40px;
-}
-#page-solutions .solutions .section.section-1 p.content,
-#page-solutions .solutions .section.section-2 p.content,
-#page-solutions .solutions .section.section-3 p.content,
-#page-solutions .solutions .section.section-4 p.content {
+#page-solutions .solutions .section p.content {
   margin-left: 42px;
 }
-#page-solutions .solutions .section.section-1 p,
-#page-solutions .solutions .section.section-2 p,
-#page-solutions .solutions .section.section-3 p,
-#page-solutions .solutions .section.section-4 p {
+#page-solutions .solutions .section p {
   font-size: 24px;
 }
-#page-solutions .solutions .section.section-1 ul.like-items,
-#page-solutions .solutions .section.section-2 ul.like-items,
-#page-solutions .solutions .section.section-3 ul.like-items,
-#page-solutions .solutions .section.section-4 ul.like-items {
+#page-solutions .solutions .section ul.like-items {
   font-size: 24px;
   margin-left: 0;
   padding: 0;
+  font-weight: bold;
 }
-#page-solutions .solutions .section.section-1 ul.like-items.dashed,
-#page-solutions .solutions .section.section-2 ul.like-items.dashed,
-#page-solutions .solutions .section.section-3 ul.like-items.dashed,
-#page-solutions .solutions .section.section-4 ul.like-items.dashed {
+#page-solutions .solutions .section ul.like-items.dashed {
   list-style-type: none;
 }
-#page-solutions .solutions .section.section-1 ul.like-items.dashed > li,
-#page-solutions .solutions .section.section-2 ul.like-items.dashed > li,
-#page-solutions .solutions .section.section-3 ul.like-items.dashed > li,
-#page-solutions .solutions .section.section-4 ul.like-items.dashed > li {
+#page-solutions .solutions .section ul.like-items.dashed > li {
   text-indent: -5px;
 }
-#page-solutions .solutions .section.section-1 ul.like-items.dashed > li::before,
-#page-solutions .solutions .section.section-2 ul.like-items.dashed > li::before,
-#page-solutions .solutions .section.section-3 ul.like-items.dashed > li::before,
-#page-solutions .solutions .section.section-4 ul.like-items.dashed > li::before {
+#page-solutions .solutions .section ul.like-items.dashed > li::before {
   content: "-";
   text-indent: -5px;
 }
-#page-solutions .solutions .section.section-1 ul.like-items li,
-#page-solutions .solutions .section.section-2 ul.like-items li,
-#page-solutions .solutions .section.section-3 ul.like-items li,
-#page-solutions .solutions .section.section-4 ul.like-items li {
+#page-solutions .solutions .section ul.like-items li {
   border-bottom: 1px solid var(--color-shapelets);
-  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#page-solutions .solutions .section ul.like-items li:last-child {
+  border-bottom: 0;
 }
 #page-solutions .solutions .section.section-5 {
   padding: 80px 0 80px 0;
   background: linear-gradient(to right, #21145F 0%, #21145F 70%, #1D9ADD 100%);
+  max-width: 100%;
 }
 #page-solutions .solutions .section.section-5 h1 {
   margin-bottom: 30px;
@@ -1789,6 +1805,7 @@ a.get-started-button.about {
   transition: all 0.5s;
   z-index: -1;
   color: white;
+  overflow: auto;
 }
 .team-member-bio p {
   font-size: 14px;
@@ -1936,7 +1953,7 @@ a.get-started-button.about {
   margin: auto;
 }
 .khiva img {
-  width: 60%;
+  width: 50%;
   height: auto;
   margin: auto;
 }

@@ -10,12 +10,36 @@ subTitle: The first state-of-the-art platform for time series analysis
 		{% include navbar.html %}
 		<main class="main-content">
 			{% include_relative _pages/home/header.html %}
-			{% include_relative _pages/home/features.html %}
-			{% include_relative _pages/home/solutions.html %}
-			{% include_relative _pages/home/who.html %}
+			{% include_relative _pages/home/home.html %}
 			{% include cta.html %}
 			{% include footer.html %}
 		</main>
 		{% include js.html %}
+		<script>
+			(() => {
+				//prevent default
+				let imageWhite = $('#page-home .navbar').hasClass('nav-shadow');
+				if(imageWhite){
+					$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+				}else{
+					$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+				}
+				imageWhite = !imageWhite;
+				
+				$(window).scroll(() => {
+					if($('#page-home .navbar').hasClass('nav-shadow')){
+						if(imageWhite){
+							imageWhite = !imageWhite;
+							$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+						}
+					}else{
+						if(!imageWhite){
+							imageWhite = !imageWhite;
+							$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+						}
+					}
+				});
+			})();
+		</script>
 	</body>
 </html>

@@ -30,7 +30,7 @@
     {
       "name": "color",
       "type": "ordinal",
-      "range": ["#20145f", "#EBE717", "#1d9add"],
+      "range": ["#00b968", "#EBE717", "#1d9add"],
       "domain": {"data": "table", "field": "c"}
     }
   ],

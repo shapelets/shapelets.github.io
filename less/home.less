@@ -1,0 +1,71 @@
+#page-home {
+    .navbar {
+        background: transparent;
+    
+        &.nav-shadow {
+            background: white;
+    
+            ul li a span, ul li a {
+                color: var(--color-shapelets);
+            }
+        }
+    
+        ul li a span, ul li a {
+            color: white;
+        }
+    
+        a.dropdown-item {
+            color: var(--color-shapelets);
+        }
+    }
+
+    .main-content {
+        top: 0;
+    }
+
+    #home {
+        background: linear-gradient(to right, #26388f 0%, #26388f 2%, rgba(32,20,95,1) 12%, rgba(32,20,95,1) 100%);
+    }
+
+    .intro-header {
+        color: white;
+        padding-top: 0;
+        padding-bottom: 50px;
+
+        .intro-message {
+            color: white;
+        }
+    }
+
+    .card-link {
+        color: #1d9add;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -20px);
+        width: 100%;
+    }
+
+    .card-text {
+        margin-bottom: 60px;
+    }
+
+    a.btn-purple {
+        color: var(--color-shapelets);
+        border-color: var(--color-shapelets);
+
+        &:hover {
+            color: white;
+            background: var(--color-shapelets);
+        }
+    }
+
+    #GPU {
+        margin: 60px auto;
+        max-width: 1200px;
+
+        img.gpucpu {
+            width: 100%;
+        }
+    }
+}   

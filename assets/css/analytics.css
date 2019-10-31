@@ -7,6 +7,7 @@
 }
 #page-analytics .intro-header {
   max-width: 100%;
+  padding: 0;
 }
 #page-analytics .intro-message {
   position: relative;

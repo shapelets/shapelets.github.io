@@ -1,10 +1,9 @@
-<div class="chart-overlay"></div>
 <div id="view" style="width: calc(100% - 20px);"></div>
 <script type="text/javascript">
     let view;
     let time = 0;
     let data = [];
-    fetch('assets/vegaSpec.json')
+    fetch('/assets/vegaSpec.json')
         .then(res => res.json())
         .then(spec => render(spec))
         .catch(err => console.error(err));

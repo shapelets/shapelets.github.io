@@ -55,13 +55,41 @@
   padding-bottom: 40px;
   color: var(--color-shapelets);
 }
+#page-solutions .solutions .section h2 {
+  font-weight: bold;
+}
+#page-solutions .solutions .section p.content {
+  margin-left: 42px;
+}
 #page-solutions .solutions .section p {
   font-size: 24px;
-  margin: 20px auto;
 }
-#page-solutions .solutions .section.section-1 {
-  text-align: center;
+#page-solutions .solutions .section ul.like-items {
+  font-size: 24px;
+  margin-left: 0;
+  padding: 0;
 }
-#page-solutions .solutions .section.section-1 p {
-  max-width: 1100px;
+#page-solutions .solutions .section ul.like-items.dashed {
+  list-style-type: none;
+}
+#page-solutions .solutions .section ul.like-items.dashed > li {
+  text-indent: -5px;
+}
+#page-solutions .solutions .section ul.like-items.dashed > li::before {
+  content: "-";
+  text-indent: -5px;
+}
+#page-solutions .solutions .section ul.like-items li {
+  border-bottom: 1px solid var(--color-shapelets);
+  margin-bottom: 20px;
+}
+#page-solutions .solutions .section.section-5 {
+  padding: 80px 0 80px 0;
+  background: linear-gradient(to right, #21145F 0%, #21145F 70%, #1D9ADD 100%);
+  max-width: 100%;
+}
+#page-solutions .solutions .section.section-5 h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
 }
