@@ -118,6 +118,10 @@ a.get-started-button.about {
     }
 }
 
+#team h2 {
+    font-weight: bold;
+}
+
 .team-bio, .team-bio-board {
     position: absolute;
     pointer-events: none;
@@ -183,27 +187,48 @@ a.get-started-button.about {
     z-index: 201;
     font-size: 4em;
     color: #F9EFD0;
-    cursor: pointer; }
+    cursor: pointer;
+}
 
 .team-member.col3 .team-bio {
     left: unset;
-    right: 80%; }
+    right: 80%;
+}
 
 .team-member.col4 .team-bio {
     left: unset;
-    right: 80%; }
+    right: 80%;
+}
 
-.team-member h4 {
-    color: var(--color-shapelets);
-    font-size: 1.125em;
-    font-weight: 700;
-    margin-bottom: 0.1em; }
+.team-member {
+    &.jointheteam {
+        height: 330px;
+        background: var(--color-shapelets);    
+
+        @media (max-width: 756px) {
+            height: 298px;
+        }
+
+        @media (max-width: 576px) {
+            height: 266px;
+        }
+    }
+
+    h4 {
+        color: var(--color-shapelets);
+        font-size: 1.125em;
+        font-weight: 700;
+        margin-bottom: 0.1em;
+    }
+}
 
 .investors {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+}
 
 .investors .team-member {
-    align-self: center; }
+    align-self: center;
+}
 
 .investors__logo {
     width: 16em; }
@@ -396,7 +421,7 @@ a.get-started-button.about {
     top: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-shapelets);
+    background: var(--color-shapelets-secondary);
     opacity: 0;
     transition: all 0.5s;
     z-index: -1;
@@ -418,7 +443,7 @@ a.get-started-button.about {
 
 .team-member:hover .team-description {
     color: white;
-    background: var(--color-shapelets);
+    background: var(--color-shapelets-secondary);
     transition: all 0.5s;
 
     h4 {

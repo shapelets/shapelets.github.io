@@ -3,6 +3,18 @@
     .navbar {
         background: transparent;
 
+        @media (max-width: 992px) {
+            background: white;
+
+            ul li a span, ul li a {
+                color: var(--color-shapelets) !important;
+            }
+
+            a.dropdown-item {
+                color: var(--color-shapelets) !important;
+            }
+        }
+
         &.nav-shadow {
             background: white;
 
@@ -57,11 +69,15 @@
 
     .solutions {
 
+        a.link {
+            color: #1d9add;
+            cursor: pointer;
+        }
+
         .section {
             max-width: 1200px;
             margin: auto;
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding: 40px 20px;
             color: var(--color-shapelets);
 
             h2 {
@@ -73,11 +89,11 @@
             }
 
             p {
-                font-size: 24px;
+                font-size: 18px;
             }
 
             ul.like-items {
-                font-size: 24px;
+                font-size: 18px;
                 margin-left: 0;
                 padding: 0;
                 font-weight: bold;

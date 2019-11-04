@@ -12,6 +12,7 @@ subTitle: The first state-of-the-art platform for time series analysis
 			{% include_relative _pages/home/header.html %}
 			{% include_relative _pages/home/home.html %}
 			{% include cta.html %}
+			{% include khiva.html %}
 			{% include footer.html %}
 		</main>
 		{% include js.html %}
@@ -19,23 +20,31 @@ subTitle: The first state-of-the-art platform for time series analysis
 			(() => {
 				//prevent default
 				let imageWhite = $('#page-home .navbar').hasClass('nav-shadow');
-				if(imageWhite){
+				if(window.innerWidth < 992) {
 					$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
-				}else{
-					$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+				} else {
+					if(imageWhite){
+						$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+					}else{
+						$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+					}
+					imageWhite = !imageWhite;
 				}
-				imageWhite = !imageWhite;
 				
 				$(window).scroll(() => {
-					if($('#page-home .navbar').hasClass('nav-shadow')){
-						if(imageWhite){
-							imageWhite = !imageWhite;
-							$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
-						}
-					}else{
-						if(!imageWhite){
-							imageWhite = !imageWhite;
-							$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+					if(window.innerWidth < 992) {
+						$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+					} else {
+						if($('#page-home .navbar').hasClass('nav-shadow')){
+							if(imageWhite){
+								imageWhite = !imageWhite;
+								$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+							}
+						}else{
+							if(!imageWhite){
+								imageWhite = !imageWhite;
+								$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+							}
 						}
 					}
 				});

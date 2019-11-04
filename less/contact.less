@@ -9,7 +9,7 @@
             color: var(--color-shapelets);
 
             p {
-                font-size: 24px;
+                font-size: 18px;
                 margin: 20px auto;
             }
 
@@ -68,12 +68,13 @@
                 min-height: 600px;
                 background: url('/assets/images/contact/asset_3.svg') no-repeat;
                 background-position: center center;
-                background-size: cover;
+                background-size: contain;
                 width: 100%;
                 position: relative;
+                margin-bottom: 80px;
 
-                @media (max-width: 756px) {
-                    min-height: auto;
+                @media (max-width: 768px) {
+                    background-size: cover;
                 }
 
                 div.contact-info {
@@ -88,7 +89,7 @@
                         padding: 16px;
 
 
-                        @media (max-width: 756px) {
+                        @media (max-width: 768px) {
                             margin: auto;
                         }
 

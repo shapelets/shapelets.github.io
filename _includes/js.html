@@ -78,7 +78,7 @@
 </script>
 
 <script>
-    $('.btn.rad').click(() => {
+    $('.rad').click(() => {
         $('#contact-us input').removeClass('border-error');
         $('#contact-us input[name="firstName"]').show();
         $('#contact-us input[name="lastName"]').show();
@@ -168,11 +168,9 @@ let canSubmitForm = true;
             phone : ''
         };
 
-        console.log(form);
-
         if(canSubmitForm){
             canSubmitForm = false;
-            //$('#contact-us button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
+            $('#box-contact-form button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
             $.post('https://server-shapelets-io-3001.herokuapp.com/api/contact', form, (data) => {
                 canSubmitForm = true;
                 $('#box-contact-form input[name="firstName"]').val('');
@@ -180,13 +178,8 @@ let canSubmitForm = true;
                 $('#box-contact-form input[name="companyName"]').val('');
                 $('#box-contact-form input[name="companyEmail"]').val('');
                 $('#box-contact-form textarea[name="description"]').val('');
-                //$('#contact-us button[type="submit"]').html('SUBMIT');
-                // $('#contact-us .contact-message').html('Thanks for your request!<br>We will reach you shortly.');
-                // $('#contact-us .contact-message').show();
-                // $('#contact-us .modal-header').hide();
-                // $('#contact-us .modal-body').css('padding-top','10px');
-                // $('#contact-us .modal-body').css('text-align','center');
-                // $('#contactForm').addClass('collapsed');
+                $('#box-contact-form button[type="submit"]').hide();
+                $('#box-contact-message').html('👍🏽 Thanks for your request! We will reach you shortly.');
             }).fail(error => {
                 let errors = error && error.responseJSON && error.responseJSON.errors;
                 $('#box-contact-form input[name="firstName"]').val('');
@@ -194,12 +187,10 @@ let canSubmitForm = true;
                 $('#box-contact-form input[name="companyName"]').val('');
                 $('#box-contact-form input[name="companyEmail"]').val('');
                 $('#box-contact-form textarea[name="description"]').val('');
-                console.log(error);
-                // if(errors.length > 0){
-                //     $(`#box-contact-form input[name="${errors[0].param}"]`).addClass('border-error');
-                //     $('#contact-us .contact-message').html(`${errors[0].msg} for input ${$(`#contact-us input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
-                //     $('#contact-us .contact-message').show();
-                // }
+                if(errors.length > 0){
+                    $('#box-contact-message').html(`${errors[0].msg} for input ${$(`#contact-us input[name="${errors[0].param}"]`).attr('data-name')}.<br>Try it again!`);
+                }
+                $('#box-contact-form button[type="submit"]').html('SUBMIT');
                 canSubmitForm = true;
             });
         }

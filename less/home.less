@@ -1,6 +1,18 @@
 #page-home {
     .navbar {
         background: transparent;
+
+        @media (max-width: 992px) {
+            background: white;
+
+            ul li a span, ul li a {
+                color: var(--color-shapelets) !important;
+            }
+
+            a.dropdown-item {
+                color: var(--color-shapelets) !important;
+            }
+        }
     
         &.nav-shadow {
             background: white;
@@ -21,6 +33,10 @@
 
     .main-content {
         top: 0;
+
+        @media (max-width: 768px) {
+            top: 66px;
+        }
     }
 
     #home {

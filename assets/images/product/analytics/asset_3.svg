@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 540.7 254" style="enable-background:new 0 0 540.7 254;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{font-family:'OpenSans';}
+	.st2{font-size:29.3218px;}
+	.st3{font-size:21.9913px;}
+	.st4{font-family:'OpenSans-Italic';}
+	.st5{fill:none;stroke:#000000;stroke-width:0.7152;stroke-miterlimit:10;}
+	.st6{fill:#2A99D5;}
+	.st7{fill:#FFF809;}
+	.st8{fill:#2ADF1F;}
+</style>
+<g>
+	<rect class="st0" width="57.2" height="38.1"/>
+	<text transform="matrix(0.9518 0 0 1 19.776 25.127)" class="st1 st2">A</text>
+	<rect x="304.6" y="95.7" class="st0" width="57.2" height="38.1"/>
+	<text transform="matrix(0.9518 0 0 1 324.3585 120.7896)" class="st1 st2">∑</text>
+	<rect y="187.7" class="st0" width="57.2" height="38.1"/>
+	<text transform="matrix(0.9518 0 0 1 19.5646 212.7867)" class="st1 st2">B</text>
+	<rect x="483.5" y="103" class="st0" width="57.2" height="38.1"/>
+	<text transform="matrix(0.9518 0 0 1 504.049 128.1241)" class="st1 st2">X</text>
+	<rect x="216.6" y="215.9" class="st0" width="226.8" height="38.1"/>
+	<text transform="matrix(0.9518 0 0 1 233.2521 241.0083)"><tspan x="0" y="0" class="st1 st2">X</tspan><tspan x="16.9" y="0" class="st1 st3">n</tspan><tspan x="30.4" y="0" class="st1 st2"> = </tspan><tspan x="62.4" y="0" class="st4 st2">α</tspan><tspan x="79.1" y="0" class="st1 st2">A</tspan><tspan x="97.7" y="0" class="st1 st3">m  </tspan><tspan x="129.5" y="0" class="st1 st2">+ </tspan><tspan x="153.9" y="0" class="st4 st2">β</tspan><tspan x="170.8" y="0" class="st1 st2">B</tspan><tspan x="189.8" y="0" class="st1 st3">u</tspan></text>
+	<g>
+		<g>
+			<path class="st5" d="M63.3,205.3c25.6-1,68.3,9,111.2-22.5c35.4-26,70.3-52.5,114.3-52.8"/>
+			<g>
+				<polygon points="286.8,132.7 287.9,130 286.7,127.4 293,130 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path class="st5" d="M289.7,110.8c-20.7-1-65.1-5.7-100.9-22.3c-40.8-19-78.6-75.7-124.2-75.2"/>
+			<g>
+				<polygon points="287.8,108 288.8,110.7 287.6,113.3 294,110.9 				"/>
+			</g>
+		</g>
+	</g>
+	<rect x="301.6" y="79.2" class="st5" width="68" height="71.8"/>
+	<g>
+		<g>
+			<line class="st5" x1="375" y1="117.3" x2="449.9" y2="117.3"/>
+			<g>
+				<polygon points="447.9,119.9 449.1,117.3 447.9,114.6 454.2,117.3 				"/>
+			</g>
+		</g>
+	</g>
+	<path class="st6" d="M50.5,24.7L50.5,24.7c-4.9,0-8.9-4-8.9-8.9v-0.9c0-4.9,4-8.9,8.9-8.9h0c4.9,0,8.9,4,8.9,8.9v0.9
+		C59.4,20.7,55.4,24.7,50.5,24.7z"/>
+	<path class="st7" d="M51,213.8L51,213.8c-4.9,0-8.9-4-8.9-8.9V204c0-4.9,4-8.9,8.9-8.9h0c4.9,0,8.9,4,8.9,8.9v0.9
+		C59.9,209.8,55.9,213.8,51,213.8z"/>
+	<path class="st8" d="M477,128L477,128c-4.9,0-8.9-4-8.9-8.9v-0.9c0-4.9,4-8.9,8.9-8.9l0,0c4.9,0,8.9,4,8.9,8.9v0.9
+		C485.9,124,481.9,128,477,128z"/>
+</g>
+</svg>

@@ -4,7 +4,9 @@
   "description": "Landing page of [shapelets.io](https://shapelets.github.io)",
   "main": "index.js",
   "scripts": {
-    "watch" : "less-watch-compiler less assets/css",
+    "style" : "lessc less/main.less assets/css/main.css",
+    "watch" : "less-watch-compiler less assets/css main.less",
+    "serve" : "http-server _site/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
