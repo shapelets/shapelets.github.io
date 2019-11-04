@@ -29,4 +29,4 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "rake"
-ruby "2.4.2"
+ruby "2.7.0"
