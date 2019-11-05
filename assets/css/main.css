@@ -1988,6 +1988,10 @@ a.get-started-button.about {
   color: white;
   transition: all 0.5s;
 }
+#page-contact .contact a .gitter,
+#page-contact .company-board a .gitter {
+  color: var(--color-shapelets);
+}
 #page-contact .contact .section,
 #page-contact .company-board .section {
   max-width: 1200px;
