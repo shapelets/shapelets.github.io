@@ -1,5 +1,54 @@
 ---
-layout: default
 title: Machine Learning On Big Series
 subTitle: The first state-of-the-art platform for time series analysis
 ---
+
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body id="page-home" class="page">
+		{% include navbar.html %}
+		<main class="main-content">
+			{% include_relative _pages/home/header.html %}
+			{% include_relative _pages/home/home.html %}
+			{% include cta.html %}
+			{% include khiva.html %}
+			{% include footer.html %}
+		</main>
+		{% include js.html %}
+		<script>
+			(() => {
+				//prevent default
+				let imageWhite = $('#page-home .navbar').hasClass('nav-shadow');
+				if(window.innerWidth < 992) {
+					$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+				} else {
+					if(imageWhite){
+						$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+					}else{
+						$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+					}
+					imageWhite = !imageWhite;
+				}
+				
+				$(window).scroll(() => {
+					if(window.innerWidth < 992) {
+						$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+					} else {
+						if($('#page-home .navbar').hasClass('nav-shadow')){
+							if(imageWhite){
+								imageWhite = !imageWhite;
+								$('#page-home .navbar.nav-shadow .navbar-logo').attr('src','/assets/images/ShapeletsLogo.png');
+							}
+						}else{
+							if(!imageWhite){
+								imageWhite = !imageWhite;
+								$('#page-home .navbar .navbar-logo').attr('src','/assets/images/shapelets-white.png');
+							}
+						}
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>

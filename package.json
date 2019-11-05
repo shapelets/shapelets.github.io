@@ -1,0 +1,32 @@
+{
+  "name": "shapelets.github.io",
+  "version": "1.0.0",
+  "description": "Landing page of [shapelets.io](https://shapelets.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "style": "lessc less/main.less assets/css/main.css",
+    "watch": "less-watch-compiler less assets/css main.less --source-map",
+    "start": "npm run style && jekyll serve",
+    "build": "npm run style && jekyll build",
+    "clean": "rm -f assets/css/main.css && rm -f assets/css/main.css.map && jekyll clean && rm -rf node_modules && rm -rf package-lock.json",
+    "serve": "http-server _site/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shapelets/shapelets.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shapelets/shapelets.github.io/issues"
+  },
+  "homepage": "https://github.com/shapelets/shapelets.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "jekyll": "^3.0.0-beta1",
+    "less": "^3.10.3",
+    "less-watch-compiler": "^1.14.1"
+  }
+}

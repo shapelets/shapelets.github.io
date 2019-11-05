@@ -4,14 +4,13 @@
 
 url: http://www.shapelets.io
 title: Shapelets
-image: 'img/ShapeletsLogo.png'
+image: '/assets/images/ShapeletsLogo.png'
 email: hello@shapelets.io
 author: The Grumpy Cat
 description: > # "Write an awesome description for your new site here.
   Shapelets is an open source framework for time series analysis in big data environments. Easy to integrate with any database, high-performance (GPUs, CPU and multicore) and scalable.
 copyright: 'Shapelets. All Rights Reserved.'
 credits: 'Contact: <a href="mailto:hello@shapelets.io">hello@shapelets.io</a>'
-
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #

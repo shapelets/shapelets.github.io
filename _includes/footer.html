@@ -1,7 +1,6 @@
 <section id="footer">
-    <div class="row first">
-        <div id="getInTouch" class="col-md-4" style="min-height: 290px;">
-            <h3 style="line-height: 80px;">Get in touch</h3>
+    <div class="row">
+        <div id="getInTouch" class="col-md-4">
             <p>
                 <div class="email font-weight-bold"><a href="mailto:hello@shapelets.io">hello@shapelets.io</a></div>
                 <br>
@@ -15,40 +14,42 @@
                 <div class="map font-weight-bold"><a href="https://www.google.com/maps/place/Shapelets/@36.7183064,-4.425112,17z/data=!3m1!4b1!4m5!3m4!1s0xd72f7360e703449:0x522d1646873b5e47!8m2!3d36.7183021!4d-4.4229233" target="_blank">View on map</a></div>
             </p>
         </div>
-        <div class="col-md-4 text-center" style="min-height: 290px;">
-            <img class="mb-4" src="/assets/images/shapelets-vertical-white.png" width="140px" alt="">
-            <div style="position: absolute;bottom: 0; left: 50%; transform: translate(-50%,0);">
-            <h5 class="mb-4">NEWSLETTER</h5>
-            <form method="post" id="news">
-                <div class="input-group">
-                    <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
-                    <input type="hidden" name="id" value="ee4e9119f5">
-                    <input type="email" class="form-control" placeholder="Enter your email here" required="" id="input" name="MERGE0" id="MERGE0">
-                    <span class="input-group-btn">
-                        <button style="background: transparent; border: none"
-                                class="btn btn-default" id="submit" type="submit" name="submit">
-                            <i style="color: white;" class="fa fa-check"></i>
-                        </button>
-                    </span>
-                </div>
-                <!-- /input-group -->
-            </form>
-            <div class="success_msg"></div>
-            </div>
+        <div class="col-md-4 text-center parent min">
+            <img class="mb-4 center-in-parent" src="/assets/images/home/shapelets-vertical-white.png" width="140px" alt="">
         </div>
-        <div class="col-md-4 text-right social" style="min-height: 290px;">
-            <ul class="ul-social">
+        <div class="col-md-4 social parent min">
+            <ul class="center-in-parent">
                 {% for social in site.social %}
                 <li>
-                    <a target="_blank" href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i> {{social.name}}</a>
+                    <a target="_blank" href="{{ social.url }}"><i class="fa fa-{{ social.title }} fa-fw"></i></a>
                 </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <p class="copyright small">&copy;<script>document.write(new Date().getFullYear())</script> {{ site.copyright }}</p>
+    <div class="line"></div>
+    <div class="row copy">
+        <div class="col-md-6">
+            <form method="post" id="news">
+                <div class="input-group">
+                    <input type="hidden" name="u" value="d13987dd7fdb6b54d2fbddef0">
+                    <input type="hidden" name="id" value="ee4e9119f5">
+                    <div class="footer-input-group">
+                        <label>Sign up for updates</label>
+                        <div style="display: inline-block; border: 1px solid white;margin-left: 10px;">
+                        <input class="footer-input" type="email" class="form-control" placeholder="EMAIL" required="" id="input" name="MERGE0" id="MERGE0">
+                        <button style="background: transparent; border: none"
+                        class="btn btn-default" id="submit" type="submit" name="submit">
+                            <i style="color: white;" class="fa fa-long-arrow-right"></i>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+           </form>
+            <div class="success_msg"></div>
+        </div>
+        <div class="col-md-6 copyright">
+            <p class="small">&copy;<script>document.write(new Date().getFullYear())</script> {{ site.copyright }}</p>
         </div>
     </div>
 </section>

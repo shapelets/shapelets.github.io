@@ -1,0 +1,66 @@
+#page-cristal-ui {
+    .header {
+        position: relative;
+        height: 500px;
+        background: url('/assets/images/header.png') no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        text-align: center;
+        color: white;
+
+        div {
+            max-width: 800px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 25px;
+            padding: 20px;
+        }
+    }
+
+    .cristal-ui {
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            color: var(--color-shapelets);
+
+            h2 {
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 20px auto;
+            }
+
+            &.section-1 {
+                text-align: center;
+    
+                p {
+                    max-width: 1100px;
+                }
+            }
+
+            .gif {
+                border-radius: 4px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+/* section footer */
+
+section#footer{
+    position: relative;
+    overflow: auto;
+    background: var(--color-shapelets);
+    color: white;
+    padding: 40px 0px 0px 0px;
+
+    #getInTouch, .min {
+        min-height: 200px;
+    }
+}
+
+@media (max-width : 756px) {
+    #footer,
+    #footer .social,
+    #footer .copyright {
+        text-align: center !important;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+#footer .copy {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+#footer .footer-input {
+    background: none;
+    color: white;
+    border: none;
+    padding: 4px;
+}
+
+#footer .footer-input::placeholder {
+    color: white;
+}
+
+#footer .social,
+#footer .copyright {
+    text-align: right;
+}
+
+section#footer .row {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+section#footer .row.first {
+    margin: 80px auto;
+    margin-top: 20px;
+}
+
+section#footer .email a {
+    text-decoration: none;
+    color: white;
+}
+
+section#footer .map a {
+    text-decoration: none;
+    color: white;
+}
+
+section#footer .social ul{
+    width: 100%;
+}
+
+section#footer .social li{
+    margin: 30px auto;
+    display: inline-block;
+}
+
+section#footer .social li a {
+    color: white;
+}
+
+section#footer .social li i {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+section#footer .social li {
+    transition: all 0.5s;
+}
+
+section#footer .social li:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+section#footer .line {
+    height: 1px;
+    width: 90%;
+    max-width: 1200px;
+    background: rgb(228, 228, 228);
+    margin: auto;
+}
+
+section#footer .copy {
+    width: 90%;
+    margin: auto;
+}
