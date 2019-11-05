@@ -287,7 +287,6 @@ h6 {
   font-size: 23px;
   line-height: 40px;
   font-weight: 400;
-  letter-spacing: 3px;
   margin-top: 5px;
 }
 .intro-divider {
@@ -1037,7 +1036,7 @@ section#footer .copy {
   color: white;
 }
 #page-open-platform .header div {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -1198,7 +1197,7 @@ section#footer .copy {
   color: white;
 }
 #page-flow .header div {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   position: absolute;
   top: 50%;

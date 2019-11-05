@@ -6,14 +6,20 @@ Jekyll theme based on [landing-page bootstrap theme ](http://startbootstrap.com/
 
 ### Requeriments
 
-You'll need to be installed NodeJS and Jekyll 
-
-### Compile
-```
-npm install
-npm run watch
-```
+You need to be installed NodeJS
 
 ### Serve
 
-`jekyll serve`
+```
+npm install
+npm start
+```
+
+### Deploy
+
+```
+npm run build
+```
+
+Then merge the development branch to master branch and automatically github will serve _site folder.
+
