@@ -157,8 +157,6 @@
 let canSubmitForm = true;
     $('#box-contact-form').submit(event => {
         event.preventDefault();
-        //$('#contact-us .contact-message').hide();
-        //$('#contact-us input').removeClass('border-error');
         let form = {
             firstName : $('#box-contact-form input[name="firstName"]').val(),
             lastName : $('#box-contact-form input[name="lastName"]').val(),

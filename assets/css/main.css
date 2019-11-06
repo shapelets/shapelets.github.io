@@ -2,6 +2,9 @@
   --color-shapelets: #20145f;
   --color-shapelets-secondary: #1d9add;
 }
+.bold {
+  font-weight: bold;
+}
 .c-primary {
   color: var(--color-shapelets);
 }
@@ -1145,7 +1148,7 @@ section#footer .copy {
   color: white;
 }
 #page-cristal-ui .header div {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -1182,7 +1185,7 @@ section#footer .copy {
 }
 #page-cristal-ui .cristal-ui .section .gif {
   border-radius: 4px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 7px 10px 14px 0px rgba(0, 0, 0, 0.14);
   width: 80%;
   height: auto;
 }
@@ -1345,7 +1348,6 @@ section#footer .copy {
 #page-company .company .section .board-people,
 #page-company .company-board .section .board-people {
   position: relative;
-  cursor: pointer;
   width: 220px;
   margin: auto;
 }
@@ -2100,6 +2102,10 @@ a.get-started-button.about {
 #page-contact .company-board .section.section-2 div.contact-info .info ul li {
   margin-bottom: 12px;
 }
+#page-contact .contact .section.section-2 div.contact-info .info ul li a,
+#page-contact .company-board .section.section-2 div.contact-info .info ul li a {
+  color: var(--color-shapelets);
+}
 .khiva {
   padding: 40px;
   background: #f1f1f1;
@@ -2124,3 +2130,4 @@ a.get-started-button.about {
   height: auto;
   margin: auto;
 }
+/*# sourceMappingURL=main.css.map */
