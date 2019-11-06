@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="padding: 0;">
     <div class="container">
-        <a href="/"><img class="navbar-logo" src="/assets/images/ShapeletsLogo.png" alt={{ site.title }}/></a>
+        <a href="/"><img class="navbar-logo" src="/assets/images/ShapeletsLogo.png" alt={{ site.title }} style="height: 60px;"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,12 +10,13 @@
             <li class="nav-item dropdown" style="margin: auto 20px;">
             <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span>Product</span>
+                <div class="dropdown-line"></div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: none;">
-                <a class="dropdown-item" href="/open-platform/">Overview</a>
-                <a class="dropdown-item" href="/analytics/">Analytics</a>
-                <a class="dropdown-item" href="/flow/">Flow</a>
-                <a class="dropdown-item" href="/cristal-ui/">Cristal UI</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: none;padding: 20px 10px">
+                <a class="dropdown-item" href="/open-platform/" onmouseover="document.getElementById('nav-asset-1').src='/assets/images/navbar/asset_1_hover.svg'" onmouseout="document.getElementById('nav-asset-1').src='/assets/images/navbar/asset_1.svg'"><img id="nav-asset-1" src="/assets/images/navbar/asset_1.svg" height="20px" width="20px" style="margin-right: 16px;">Overview</a>
+                <a class="dropdown-item" href="/analytics/" onmouseover="document.getElementById('nav-asset-2').src='/assets/images/navbar/asset_2_hover.svg'" onmouseout="document.getElementById('nav-asset-2').src='/assets/images/navbar/asset_2.svg'"><img id="nav-asset-2" src="/assets/images/navbar/asset_2.svg" height="20px" width="20px" style="margin-right: 16px;">Analytics</a>
+                <a class="dropdown-item" href="/flow/" onmouseover="document.getElementById('nav-asset-3').src='/assets/images/navbar/asset_3_hover.svg'" onmouseout="document.getElementById('nav-asset-3').src='/assets/images/navbar/asset_3.svg'"><img id="nav-asset-3" src="/assets/images/navbar/asset_3.svg" height="20px" width="20px" style="margin-right: 16px;">Flow</a>
+                <a class="dropdown-item" href="/cristal-ui/" onmouseover="document.getElementById('nav-asset-4').src='/assets/images/navbar/asset_4_hover.svg'" onmouseout="document.getElementById('nav-asset-4').src='/assets/images/navbar/asset_4.svg'"><img id="nav-asset-4" src="/assets/images/navbar/asset_4.svg" height="20px" width="20px" style="margin-right: 16px;">Cristal UI</a>
             </div>
             </li>
             <li class="nav-item toogle-on-click" style="margin: auto 20px;">

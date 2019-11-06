@@ -22,7 +22,7 @@
 }
 .page .main-content {
   position: relative;
-  top: 96px;
+  top: 60px;
 }
 @media (max-width: 756px) {
   .page .main-content {
@@ -57,6 +57,49 @@
 .navbar ul li a span,
 .navbar ul li a {
   color: var(--color-shapelets);
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar a.dropdown-item:hover {
+  color: #3A24AC;
+}
+.navbar a.dropdown-item {
+  padding: 0.5rem 1.5rem;
+}
+.navbar .dropdown-toggle > .dropdown-line {
+  height: 2px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  top: 40px;
+  margin: 0;
+  opacity: 0;
+  transition: 0.5s linear all;
+}
+.navbar .dropdown.show .dropdown-toggle > .dropdown-line {
+  opacity: 1;
+}
+.navbar .dropdown .dropdown-toggle::after {
+  transform: rotate(0);
+  transition: 0.2s linear all;
+}
+.navbar .dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg);
+  transition: 0.2s linear all;
+}
+.navbar .dropdown-toggle:hover > .dropdown-line {
+  opacity: 1;
+  transition: 0.5s linear all;
+}
+.navbar .dropdown-menu {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .navbar .dropdown-menu {
+    box-shadow: none;
+  }
 }
 .text-center {
   text-align: center;
@@ -874,7 +917,7 @@ section#team div.hiring h1.title {
 }
 @media (max-width: 768px) {
   #page-home .main-content {
-    top: 66px;
+    top: 60px;
   }
 }
 #page-home #home {
@@ -2134,4 +2177,3 @@ a.get-started-button.about {
   height: auto;
   margin: auto;
 }
-/*# sourceMappingURL=main.css.map */
