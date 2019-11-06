@@ -1185,7 +1185,7 @@ section#footer .copy {
 }
 #page-cristal-ui .cristal-ui .section .gif {
   border-radius: 4px;
-  box-shadow: 7px 10px 14px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 7px 10px 14px 0px rgba(0, 0, 0, 0.4);
   width: 80%;
   height: auto;
 }
@@ -2105,6 +2105,10 @@ a.get-started-button.about {
 #page-contact .contact .section.section-2 div.contact-info .info ul li a,
 #page-contact .company-board .section.section-2 div.contact-info .info ul li a {
   color: var(--color-shapelets);
+}
+#page-contact .contact .section.section-2 div.contact-info .info ul li a:hover,
+#page-contact .company-board .section.section-2 div.contact-info .info ul li a:hover {
+  color: var(--color-shapelets-secondary);
 }
 .khiva {
   padding: 40px;
