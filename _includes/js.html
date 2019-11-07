@@ -154,7 +154,8 @@
 </script>
 
 <script>
-let canSubmitForm = true;
+    let canSubmitForm = true;
+    if($('#box-success-message')) $('#box-success-message').hide();
     $('#box-contact-form').submit(event => {
         event.preventDefault();
         let form = {
@@ -170,14 +171,15 @@ let canSubmitForm = true;
             canSubmitForm = false;
             $('#box-contact-form button[type="submit"]').html(`<div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>`);
             $.post('https://server-shapelets-io-3001.herokuapp.com/api/contact', form, (data) => {
-                canSubmitForm = true;
+                canSubmitForm = false;
                 $('#box-contact-form input[name="firstName"]').val('');
                 $('#box-contact-form input[name="lastName"]').val('');
                 $('#box-contact-form input[name="companyName"]').val('');
                 $('#box-contact-form input[name="companyEmail"]').val('');
                 $('#box-contact-form textarea[name="description"]').val('');
                 $('#box-contact-form button[type="submit"]').hide();
-                $('#box-contact-message').html('👍🏽 Thanks for your request! We will reach you shortly.');
+                $('#box-contact-form').hide()
+                $('#box-success-message').show();
             }).fail(error => {
                 let errors = error && error.responseJSON && error.responseJSON.errors;
                 $('#box-contact-form input[name="firstName"]').val('');

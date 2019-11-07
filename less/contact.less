@@ -1,6 +1,35 @@
 #page-contact {
     .contact, .company-board {
 
+        .box-form.cat {
+            display: none;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            min-height: 500px;
+            width: 100%;
+        }
+
+        .box-success-text {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            width: 100%;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #cat-success-message {
+            height: 100%;
+            width: 100%;
+            background: url(/assets/images/contact/cat.svg) no-repeat center center;
+            background-size: 80%;
+            position: relative;
+        }
+
         a .gitter {
             color: var(--color-shapelets);
         }

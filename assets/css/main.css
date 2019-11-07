@@ -2033,6 +2033,34 @@ a.get-started-button.about {
   color: white;
   transition: all 0.5s;
 }
+#page-contact .contact .box-form.cat,
+#page-contact .company-board .box-form.cat {
+  display: none;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  min-height: 500px;
+  width: 100%;
+}
+#page-contact .contact .box-success-text,
+#page-contact .company-board .box-success-text {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+#page-contact .contact #cat-success-message,
+#page-contact .company-board #cat-success-message {
+  height: 100%;
+  width: 100%;
+  background: url(/assets/images/contact/cat.svg) no-repeat center center;
+  background-size: 80%;
+  position: relative;
+}
 #page-contact .contact a .gitter,
 #page-contact .company-board a .gitter {
   color: var(--color-shapelets);
