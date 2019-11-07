@@ -2156,18 +2156,23 @@ a.get-started-button.about {
 .khiva {
   padding: 40px;
   background: #f1f1f1;
+  color: var(--color-shapelets);
 }
 @media (max-width: 756px) {
   .khiva {
     padding: 20px;
   }
 }
+.khiva h2 {
+  font-weight: 700!important;
+}
 .khiva i {
   font-size: 80px;
+  color: var(--color-shapelets);
 }
 .khiva a,
 .khiva a:visited {
-  color: black;
+  color: var(--color-shapelets);
 }
 .khiva .row {
   margin: auto;
@@ -2177,3 +2182,4 @@ a.get-started-button.about {
   height: auto;
   margin: auto;
 }
+/*# sourceMappingURL=main.css.map */
