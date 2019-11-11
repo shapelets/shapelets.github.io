@@ -1170,6 +1170,13 @@ section#footer .copy {
   padding-bottom: 20px;
   color: var(--color-shapelets);
 }
+#page-analytics .section.section-0 {
+  padding-top: 40px;
+  text-align: center;
+}
+#page-analytics .section.section-0 p {
+  max-width: 1100px;
+}
 #page-analytics .section h2 {
   font-weight: bold;
 }
